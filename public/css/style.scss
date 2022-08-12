@@ -1,0 +1,161 @@
+@import "./_variables";
+@import "./_functions";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: #868f96;
+}
+
+::selection {
+	background: #5e024a;
+	color: #cacaca;
+}
+
+html {
+	overflow: overlay;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	font-family: "B612 Mono", monospace;
+}
+
+.main {
+	z-index: 1;
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	padding: 5rem 0;
+	background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+	color: #cacaca;
+	.title {
+		animation: slide-in 1.3s ease-in-out;
+	}
+	&:before {
+		content: "";
+		z-index: -1;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: url("../img/background.jpg") no-repeat center / cover;
+		opacity: 0.2;
+	}
+}
+
+.accordion {
+	--bs-accordion-active-bg: transparent !important;
+	--bs-accordion-bg: transparent;
+	--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.05);
+	--bs-accordion-btn-color: #cacaca;
+	--bs-accordion-active-color: #a1a1a1;
+	--bs-accordion-active-bg: rgba(1, 1, 1, 0.2);
+	.accordion-item {
+		border: none;
+		animation: slide-in-up 2s ease-in-out;
+		.accordion-button::after,
+		.accordion-button:not(.collapsed)::after {
+			background: url("https://api.iconify.design/iconoir/nav-arrow-down.svg?color=%23cacaca")
+				no-repeat center center / contain;
+		}
+		.accordion-button:is(.collapsed) {
+			color: #cacaca;
+		}
+
+		.accordion-button:not(.collapsed) {
+			color: #f1f1f1;
+			> p {
+				transform: translateX(15px);
+				transition: transform 0.6s ease-in-out;
+			}
+		}
+	}
+}
+
+.input-group-text {
+	border-radius: 20% 0% 0% 20%;
+	background: transparent;
+}
+
+.accordion-body {
+	.form-control {
+		background: transparent;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		@include placeholder {
+			color: #cacaca;
+		}
+	}
+}
+
+.btn-outline-secondary {
+	border: 1px solid #cacaca;
+	border-left: none;
+	border-radius: 0 20% 20% 0%;
+	color: #cacaca;
+	&:hover,
+	&:focus {
+		box-shadow: none;
+		background: transparent;
+		border-color: #cacaca;
+	}
+	&:hover svg {
+		transform: scale(1.1);
+	}
+}
+
+@keyframes slide-in-up {
+	from {
+		transform: translateY(100%);
+	}
+}
+
+@keyframes slide-in {
+	from {
+		transform: translateY(-200%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+// add_resource
+form {
+	.form-control {
+		background: transparent;
+		color: #cacaca;
+		&:focus {
+			background-color: transparent;
+			color: #cacaca;
+		}
+	}
+	select {
+		padding: 5px;
+		color: #000;
+		font-size: 12px;
+		background: transparent;
+		-webkit-appearance: none;
+	}
+	select option {
+		background-color: #596164;
+	}
+}

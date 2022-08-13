@@ -1,80 +1,8 @@
-$(document).ready(function () {
-	$(".dataTableExec").DataTable();
-});
+let urlRegex =
+	/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
 
-const handleDelete = (id) => {
-	Swal.fire({
-		title: "",
-		text: "Do you really want to delete this actor ?",
-		icon: "question",
-		showCancelButton: true,
-		confirmButtonColor: "#3085d6",
-		cancelButtonColor: "#d33",
-		confirmButtonText: "Yes!",
-		cancelButtonText: "No",
-	}).then((result) => {
-		if (result.value) {
-			Swal.fire({
-				title: "Loading",
-				html: "Wait, please...",
-				showConfirmButton: false,
-				allowOutsideClick: false,
-			});
-			window.location = "?drop&id=" + id;
-			Swal.showLoading();
-		} else {
-			Swal.fire({
-				title: "Canceling",
-				html: "Wait, please...",
-				showConfirmButton: false,
-				allowOutsideClick: false,
-			});
+let regex = new RegExp(urlRegex);
 
-			Swal.showLoading();
-			setTimeout(() => {
-				window.location.reload();
-			}, 250);
-		}
-	});
-	return false;
-};
-
-const handleEdit = (id) => {
-	Swal.fire({
-		title: "",
-		text: "Do you really want to edit this actor ?",
-		icon: "question",
-		showCancelButton: true,
-		confirmButtonColor: "#3085d6",
-		cancelButtonColor: "#d33",
-		confirmButtonText: "Yes!",
-		cancelButtonText: "No",
-	}).then((result) => {
-		if (result.value) {
-			Swal.fire({
-				title: "Loading",
-				html: "Wait, please...",
-				showConfirmButton: false,
-				allowOutsideClick: false,
-			});
-			window.location = "actor/iud_actor?drop&id=" + id;
-			Swal.showLoading();
-		} else {
-			Swal.fire({
-				title: "Canceling",
-				html: "Wait, please...",
-				showConfirmButton: false,
-				allowOutsideClick: false,
-			});
-
-			Swal.showLoading();
-			setTimeout(() => {
-				window.location.reload();
-			}, 250);
-		}
-	});
-	return false;
-};
 
 const handleSubmit = () => {
 	let act = document.querySelector("#act");
@@ -89,14 +17,38 @@ const handleSubmit = () => {
 		resource_category = document.querySelector("#resource_category"),
 		resource_value =
 			resource_category.options[resource_category.selectedIndex].value;
-
-	if (
-		resource_name == "" ||
-		resource_description == "" ||
-		resource_link == "" ||
-		resource_value == ""
-	) {
-		alert("Preencha os campos");
+	
+		if (
+			resource_name == "" ||
+			resource_description == "" ||
+			resource_link == "" ||
+			resource_value == ""
+		) {
+			Swal.fire("", "Preencha os campos", "error");
+			return false;
+	}
+	
+	if (!resource_link.match(regex)) {
+		Swal.fire("", "Informe uma URL válida", "warning");
 		return false;
 	}
+	
+	Swal.fire({
+		title: "Salvando",
+		html: "Redirecionando, por favor aguarde...",
+		showConfirmButton: false,
+		allowOutsideClick: false,
+	});
+	Swal.showLoading();
+	setTimeout(() => {
+		window.location.href = "./";
+	}, 800);
 };
+
+const showMessage = document.querySelector(".showMessage");
+
+if (showMessage.classList.contains("d-flex")) {
+	setTimeout(() => {
+		showMessage.classList.add("d-none");
+	}, 7500);
+}

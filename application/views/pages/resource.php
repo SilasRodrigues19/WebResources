@@ -1,8 +1,20 @@
 <main class="main">
+	<header>
+		<nav class="nav-bar">
+			<ul>
+					<li>
+						<a href="/WebResources/resource/add_resource">
+							<span class="iconify" data-icon="eos-icons:content-new" data-width="20" data-height="20"></span>
+						</a>
+					</li>
+			</ul>
+		</nav>
+	</header>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<h3 class="text-center title">Recursos para desenvolvimento web</h3>
+				<?= showMessage(); ?>
 			</div>
 		</div>
 		<hr class="hr" />

@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #888;
+}
+a:hover {
+  color: #cacaca;
+}
+
+li {
+  list-style: none;
+}
+
 ::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: transparent;
@@ -44,11 +56,30 @@ body {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  padding: 5rem 0;
+  padding: 10rem 0;
   background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
   color: #cacaca;
 }
-.main .title {
+.main header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  min-height: 8vh;
+  background: rgba(1, 1, 1, 0.03);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  border-bottom: 1px solid rgba(1, 1, 1, 0.08);
+}
+.main header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0 35px;
+  margin: 20px auto;
+}
+.main .title, .main .showMessage {
   -webkit-animation: slide-in 1.3s ease-in-out;
           animation: slide-in 1.3s ease-in-out;
 }
@@ -62,6 +93,10 @@ body {
   height: 100%;
   background: url("../img/background.jpg") no-repeat center/cover;
   opacity: 0.2;
+}
+
+.swal2-container.swal2-center > .swal2-popup {
+  font-family: monospace;
 }
 
 .accordion {

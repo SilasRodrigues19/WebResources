@@ -47,7 +47,7 @@ class Resource extends CI_Controller
 		$act = $this->input->post('act');
 
 		$dados['resource_id'] = $this->input->post('resource_id');
-		/* 
+		
 			$dados['resource_name'] = $this->input->post('resource_name');
 			$dados['resource_description'] = $this->input->post('resource_description');
 			$dados['resource_link'] = $this->input->post('resource_link');
@@ -55,8 +55,22 @@ class Resource extends CI_Controller
 
 			#var_dump($dados); exit(); 
 
-			$res = $this->mres->insertResource($dados);
- 		*/
+			$btnSubmit = $this->input->post('btnSubmit');
+
+			if(isset($btnSubmit)) {
+				$res = $this->mres->insertResource($dados);
+
+				if($res) {
+					notify('', 'Recurso adicionado', 'success', 'w-50');
+					redirect('/resource/add_resource');
+				} else {
+					notify('', 'Erro ao adicionar recurso', 'danger', 'w-50');
+					redirect('/resource/add_resource');
+				}
+			}
+
+			
+ 		
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('pages/add_resource', $data);

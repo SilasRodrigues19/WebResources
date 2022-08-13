@@ -59,14 +59,17 @@ class Resource_model extends CI_Model {
     $insert = "INSERT INTO resource (resource_name, resource_description, resource_link)
               VALUES ('{$dados['resource_name']}', '{$dados['resource_description']}', '{$dados['resource_link']}')";
 
-    echo $insert; exit();
+    #echo $insert; exit();
 
     $execute = $this->db->query($insert);
 
     if($execute) {
       $insert = "INSERT INTO resource_category VALUES ({$dados['resource_category']}, {$dados['resource_id']})";
       $execute = $this->db->query($insert);
+      return true;
     }
+
+    return false;
 
 
   }

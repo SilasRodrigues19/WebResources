@@ -86,13 +86,13 @@ body {
 .main:before {
   content: "";
   z-index: -1;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background: url("../img/background.jpg") no-repeat center/cover;
-  opacity: 0.2;
+  opacity: 0.3;
 }
 
 .swal2-container.swal2-center > .swal2-popup {
@@ -193,21 +193,32 @@ body {
     transform: translateY(0);
   }
 }
-form .form-control {
-  background: transparent;
-  color: #cacaca;
-}
-form .form-control:focus {
+form .form-control, form .form-select {
   background-color: transparent;
   color: #cacaca;
 }
-form select {
-  padding: 5px;
-  color: #000;
-  font-size: 12px;
-  background: transparent;
+form .form-control::-webkit-input-placeholder, form .form-select::-webkit-input-placeholder {
+  color: #888;
+}
+form .form-control:-moz-placeholder, form .form-select:-moz-placeholder {
+  color: #888;
+}
+form .form-control::-moz-placeholder, form .form-select::-moz-placeholder {
+  color: #888;
+}
+form .form-control:-ms-input-placeholder, form .form-select:-ms-input-placeholder {
+  color: #888;
+}
+form .form-control:focus, form .form-select:focus {
+  background-color: transparent;
+  color: #cacaca;
+  box-shadow: 0 0 0 0.25rem rgba(89, 97, 100, 0.2);
+  border-color: #a1a1a1;
+}
+form .form-select {
+  background-image: url("https://api.iconify.design/typcn/arrow-sorted-down.svg?color=%23cacaca");
   -webkit-appearance: none;
 }
-form select option {
+form .form-select option {
   background-color: #596164;
 }/*# sourceMappingURL=style.css.map */

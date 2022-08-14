@@ -79,13 +79,13 @@ body {
 	&:before {
 		content: "";
 		z-index: -1;
-		position: absolute;
+		position: fixed;
 		left: 0;
 		top: 0;
 		width: 100%;
 		height: 100%;
 		background: url("../img/background.jpg") no-repeat center / cover;
-		opacity: 0.2;
+		opacity: 0.3;
 	}
 }
 
@@ -172,22 +172,24 @@ body {
 
 // add_resource
 form {
-	.form-control {
-		background: transparent;
+	.form-control, .form-select {
+		@include placeholder {
+			color: #888;
+		}
+		background-color: transparent;
 		color: #cacaca;
 		&:focus {
 			background-color: transparent;
 			color: #cacaca;
+			box-shadow: 0 0 0 0.25rem rgba(89, 97, 100, .2);
+			border-color: #a1a1a1;
 		}
 	}
-	select {
-		padding: 5px;
-		color: #000;
-		font-size: 12px;
-		background: transparent;
+	.form-select {
+		background-image: url("https://api.iconify.design/typcn/arrow-sorted-down.svg?color=%23cacaca");
 		-webkit-appearance: none;
-	}
-	select option {
-		background-color: #596164;
+		option {
+			background-color: #596164;
+		}
 	}
 }

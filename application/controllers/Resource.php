@@ -25,8 +25,8 @@ class Resource extends CI_Controller
 		$res = $this->mres->showResource();
 		$data['showResource'] = $res;
 
-		$res = $this->mres->teste();
-		$data['teste'] = $res;
+		$res = $this->mres->showList();
+		$data['showList'] = $res;
 
 
 		$this->load->view('templates/header', $data);

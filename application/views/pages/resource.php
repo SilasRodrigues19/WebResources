@@ -31,7 +31,7 @@
 										<p>'.$showCategory[$idx]['category_description'].'</p>
 								</button>
 							</h2>
-						
+						</div>
 					'?>
 					<?php endforeach; ?>
 					

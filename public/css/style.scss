@@ -20,17 +20,17 @@ li {
 }
 
 ::-webkit-scrollbar-track {
-	border-radius: 10px;
+	border-radius: pxToRem(10);
 	background-color: transparent;
 }
 
 ::-webkit-scrollbar {
-	width: 12px;
+	width: pxToRem(12);
 	background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-	border-radius: 10px;
+	border-radius: pxToRem(10);
 	background-color: #868f96;
 }
 
@@ -65,16 +65,16 @@ body {
 		width: 100%;
 		min-height: 8vh;
 		background: rgba(1, 1, 1, .03);
-    backdrop-filter: blur(25px);
-    border-bottom: 1px solid rgba(1, 1, 1, .08);
+    backdrop-filter: blur(pxToRem(25));
+    border-bottom: pxToRem(1) solid rgba(1, 1, 1, .08);
 		nav ul {
 			@include flexCenter(end);
-			padding: 0 35px;
-			margin: 20px auto;
+			padding: 0 pxToRem(35);
+			margin: pxToRem(20) auto;
 		}
 	}
 	.title, .showMessage {
-		animation: slide-in 1.3s ease-in-out;
+		animation: slide-in 3.5s ease-in-out;
 	}
 	&:before {
 		content: "";
@@ -93,6 +93,10 @@ body {
 	font-family: monospace;
 }
 
+.collapse {
+	@include slideInUpOnCollapse;
+}
+
 .accordion {
 	--bs-accordion-active-bg: transparent !important;
 	--bs-accordion-bg: transparent;
@@ -102,7 +106,7 @@ body {
 	--bs-accordion-active-bg: rgba(1, 1, 1, 0.2);
 	.accordion-item {
 		border: none;
-		animation: slide-in-up 2s ease-in-out;
+		@include slideInUpAccordionItem;
 		.accordion-button::after,
 		.accordion-button:not(.collapsed)::after {
 			background: url("https://api.iconify.design/iconoir/nav-arrow-down.svg?color=%23cacaca")
@@ -115,7 +119,7 @@ body {
 		.accordion-button:not(.collapsed) {
 			color: #f1f1f1;
 			> p {
-				transform: translateX(15px);
+				transform: translateX(pxToRem(15));
 				transition: transform 0.6s ease-in-out;
 			}
 		}
@@ -140,7 +144,7 @@ body {
 }
 
 .btn-outline-secondary {
-	border: 1px solid #cacaca;
+	border: pxToRem(1) solid #cacaca;
 	border-left: none;
 	border-radius: 0 20% 20% 0%;
 	color: #cacaca;

@@ -40,7 +40,7 @@
           </div>
 
           <div class="form-group mt-4">
-            <label for="resource_category">ID da categoria</label>
+            <label for="resource_category">Categoria</label>
             <select name="resource_category" id="resource_category" class="form-select">
                 <option value="" selected disabled>Selecione a categoria</option>
                 <?php foreach($showCategoryOption as $idx => $value): ?>

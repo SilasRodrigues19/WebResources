@@ -40,9 +40,6 @@ const handleSubmit = () => {
 		allowOutsideClick: false,
 	});
 	Swal.showLoading();
-	setTimeout(() => {
-		window.location.href = "./";
-	}, 800);
 };
 
 const showMessage = document.querySelector(".showMessage");

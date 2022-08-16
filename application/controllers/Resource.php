@@ -38,6 +38,9 @@ class Resource extends CI_Controller
 	{
 		$data['title'] = 'Adicionar Recursos';
 
+		$res = $this->mres->getLastResource();
+		$data['lastResource'] = $res;
+
 		$res = $this->mres->showCategoryOption();
 		$data['showCategoryOption'] = $res;
 
@@ -62,7 +65,7 @@ class Resource extends CI_Controller
 
 				if($res) {
 					notify('', 'Recurso adicionado', 'success', 'w-50');
-					redirect('/resource/add_resource');
+					redirect('/resource');
 				} else {
 					notify('', 'Erro ao adicionar recurso', 'danger', 'w-50');
 					redirect('/resource/add_resource');

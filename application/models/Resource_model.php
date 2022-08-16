@@ -65,13 +65,23 @@ class Resource_model extends CI_Model {
     $execute = $this->db->query($insert);
 
     if($execute) {
-      $insert = "INSERT INTO resource_category VALUES ({$dados['resource_category']}, {$dados['resource_id']})";
+      $insert = "INSERT INTO resource_category (`category_id`, `resource_id`) VALUES ({$dados['resource_category']}, {$dados['resource_id']})";
       $execute = $this->db->query($insert);
       return true;
     }
 
     return false;
 
+
+  }
+
+  public function getLastResource()
+  {
+    $select = "SELECT resource_link FROM resource ORDER BY created_at DESC LIMIT 1";
+
+    $execute = $this->db->query($select);
+
+    return ($execute->num_rows() > 0) ? $execute->result_array() : array();
 
   }
 

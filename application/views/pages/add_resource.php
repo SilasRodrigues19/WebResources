@@ -12,14 +12,14 @@
 	</header>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-sm-12">
 				<h3 class="text-center">Adicionar recurso</h3>
         <?= showMessage(); ?>
 			</div>
 		</div>
 		<hr class="hr" />
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-sm-12 col-md-6 m-auto">
 				<form action="" method="POST" name="resource_form">
           <input type="hidden" name="act" id="act">
           <input type="hidden" name="resource_id" id="resource_id" value="<?= $max_id['max_id'] ?>">
@@ -36,7 +36,7 @@
 
           <div class="form-group mt-4">
             <label for="resource_link">Link do recurso</label>
-            <input autocomplete="off" type="text" class="form-control" id="resource_link" name="resource_link" placeholder="https://example.com">
+            <input autocomplete="off" type="text" class="form-control" id="resource_link" name="resource_link" placeholder="<?= $lastResource[0]['resource_link']; ?>">
           </div>
 
           <div class="form-group mt-4">
@@ -50,7 +50,7 @@
                 <?php endforeach; ?>
             </select>
           </div>
-          <button name="btnSubmit" onclick="return handleSubmit();" type="submit" class="btn btn-primary mt-4">Salvar</button>
+          <button id="btnSubmit" name="btnSubmit" onclick="return handleSubmit();" type="submit" class="btn btn-secondary mt-4">Salvar</button>
         </form>
 			</div>
 		</div>

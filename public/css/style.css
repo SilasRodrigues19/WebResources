@@ -331,6 +331,20 @@ body {
   background: transparent;
 }
 
+.accordion-body .btn-outline-secondary {
+  border: 0.0625rem solid #cacaca;
+  border-left: none;
+  border-radius: 0 20% 20% 0%;
+  color: #cacaca;
+}
+.accordion-body .btn-outline-secondary:hover, .accordion-body .btn-outline-secondary:focus {
+  box-shadow: none;
+  background: transparent;
+  border-color: #cacaca;
+}
+.accordion-body .btn-outline-secondary:hover svg {
+  transform: scale(1.1);
+}
 .accordion-body .form-control {
   background: transparent;
   text-overflow: ellipsis;
@@ -348,21 +362,6 @@ body {
 }
 .accordion-body .form-control:-ms-input-placeholder {
   color: #cacaca;
-}
-
-.btn-outline-secondary {
-  border: 0.0625rem solid #cacaca;
-  border-left: none;
-  border-radius: 0 20% 20% 0%;
-  color: #cacaca;
-}
-.btn-outline-secondary:hover, .btn-outline-secondary:focus {
-  box-shadow: none;
-  background: transparent;
-  border-color: #cacaca;
-}
-.btn-outline-secondary:hover svg {
-  transform: scale(1.1);
 }
 
 @-webkit-keyframes slide-in-up {

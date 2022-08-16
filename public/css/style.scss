@@ -132,6 +132,21 @@ body {
 }
 
 .accordion-body {
+	.btn-outline-secondary {
+			border: pxToRem(1) solid #cacaca;
+			border-left: none;
+			border-radius: 0 20% 20% 0%;
+			color: #cacaca;
+			&:hover,
+			&:focus {
+				box-shadow: none;
+				background: transparent;
+				border-color: #cacaca;
+			}
+			&:hover svg {
+				transform: scale(1.1);
+			}
+}
 	.form-control {
 		background: transparent;
 		text-overflow: ellipsis;
@@ -140,22 +155,6 @@ body {
 		@include placeholder {
 			color: #cacaca;
 		}
-	}
-}
-
-.btn-outline-secondary {
-	border: pxToRem(1) solid #cacaca;
-	border-left: none;
-	border-radius: 0 20% 20% 0%;
-	color: #cacaca;
-	&:hover,
-	&:focus {
-		box-shadow: none;
-		background: transparent;
-		border-color: #cacaca;
-	}
-	&:hover svg {
-		transform: scale(1.1);
 	}
 }
 

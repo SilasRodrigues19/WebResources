@@ -32,7 +32,7 @@
 }
 
 @mixin slideInUpOnCollapse {
-  @for $i from 1 through 35 {
+  @for $i from 1 through 999 {
     &:nth-of-type(#{$i}) {
 			animation: slide-in-up #{$i * .1}s ease-in-out;
     }

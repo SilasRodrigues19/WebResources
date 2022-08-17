@@ -25,7 +25,7 @@ li {
 }
 
 ::-webkit-scrollbar {
-	width: pxToRem(12);
+	width: pxToRem(6);
 	background-color: transparent;
 }
 
@@ -89,6 +89,35 @@ body {
 	}
 }
 
+.searchBar {
+	input[type="search"] {
+		background: transparent;
+		border-right: none;
+    box-shadow: none;
+		color: #cacaca;
+		&::-webkit-search-cancel-button {
+			-webkit-appearance: none;
+			appearance: none;
+			height: 10px;
+			width: 10px;
+			background-image: url('https://api.iconify.design/ep/close-bold.svg?color=%23cacaca');
+			background-size: 10px 10px;
+		}
+	}
+	.btn-outline-secondary {
+    border-color: #cacaca;
+	}
+}
+
+.spanFilter {
+	border: .1rem dashed;
+	padding: 0.3rem 0.5rem;
+	border-radius: 5%;
+	.closeFilter {
+		cursor: pointer;
+	}
+}
+
 .swal2-container.swal2-center > .swal2-popup {
 	font-family: monospace;
 }
@@ -111,6 +140,7 @@ body {
 		.accordion-button:not(.collapsed)::after {
 			background: url("https://api.iconify.design/iconoir/nav-arrow-down.svg?color=%23cacaca")
 				no-repeat center center / contain;
+				transition: all .4s linear;
 		}
 		.accordion-button:is(.collapsed) {
 			color: #cacaca;
@@ -194,5 +224,12 @@ form {
 		option {
 			background-color: #596164;
 		}
+	}
+}
+
+
+@media only screen and (max-width: 500px) {
+	.main header nav ul {
+		gap: 3rem;
 	}
 }

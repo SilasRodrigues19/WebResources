@@ -25,9 +25,20 @@ class Resource extends CI_Controller
 		$res = $this->mres->showResource();
 		$data['showResource'] = $res;
 
-		$res = $this->mres->showList();
-		$data['showList'] = $res;
+		$btnSearch = $this->input->post('btnSearch');
+		$search = $this->input->post('search');
 
+		$data['searchTerm'] = false;
+
+		if(isset($btnSearch)) {
+			$data['searchTerm'] = $search;
+		}
+		
+
+		$res = $this->mres->showList($search);
+
+		$data['showList'] = $res;
+		
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('pages/resource', $data);
@@ -73,8 +84,6 @@ class Resource extends CI_Controller
 			}
 
 			
- 		
-
 		$this->load->view('templates/header', $data);
 		$this->load->view('pages/add_resource', $data);
 		$this->load->view('templates/footer', $data);

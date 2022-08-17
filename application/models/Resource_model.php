@@ -20,15 +20,21 @@ class Resource_model extends CI_Model {
     return ($execute->num_rows() > 0) ? $execute->result_array() : array();
   }
 
-  public function showList()
+  public function showList($filter = false)
   {
+
+    if($filter) $filter = " AND C.resource_description LIKE '%$filter%'";
+
     $select = "SELECT  C.*, CONCAT(C.resource_name, ' - ' , C.resource_description) AS resource_name_description, a.*
                 FROM category AS A
                 INNER JOIN resource_category AS B ON A.category_id = B.category_id
                 INNER JOIN resource AS C ON C.resource_id = B.resource_id
                 WHERE A.category_id = B.category_id AND C.resource_id = B.resource_id
+                $filter
                 ORDER BY C.resource_name ASC
               ";
+
+    #echo $select; exit();
 
     $execute = $this->db->query($select);
 

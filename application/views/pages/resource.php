@@ -3,7 +3,7 @@
 		<nav class="nav-bar">
 			<ul class="d-flex justify-content-between flex-row-reverse">
 					<li>
-						<a href="/WebResources/resource/add_resource">
+						<a href="<?= base_url('/resource/new'); ?>">
 							<span class="iconify" data-icon="eos-icons:content-new" data-width="20" data-height="20"></span>
 						</a>
 					</li>

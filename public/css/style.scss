@@ -84,7 +84,7 @@ body {
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: url("../img/background.jpg") no-repeat center / cover;
+		background: url("../img/backgound.webp") no-repeat center / cover;
 		opacity: 0.3;
 	}
 }
@@ -93,19 +93,21 @@ body {
 	input[type="search"] {
 		background: transparent;
 		border-right: none;
+		border-color: #888;
     box-shadow: none;
 		color: #cacaca;
 		&::-webkit-search-cancel-button {
 			-webkit-appearance: none;
 			appearance: none;
-			height: 10px;
-			width: 10px;
-			background-image: url('https://api.iconify.design/ep/close-bold.svg?color=%23cacaca');
-			background-size: 10px 10px;
+			cursor: pointer;
+			height: pxToRem(15);
+			width: pxToRem(15);
+			background-image: url('https://api.iconify.design/ep/close-bold.svg?color=%23888');
+			background-size: pxToRem(15) pxToRem(15);
 		}
 	}
 	.btn-outline-secondary {
-    border-color: #cacaca;
+    border-color: #888;
 	}
 }
 
@@ -161,6 +163,26 @@ body {
 	background: transparent;
 }
 
+.select2-container--default .select2-selection--single {
+	background: transparent;
+	border: none;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field, .select2-container--default .select2-results>.select2-results__options {
+	background: rgba(1, 1, 1, .1);
+	color: #a5a5a5;
+	border: none;
+	outline: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	color: #cacaca;
+}
+
+.select2-results__option--selectable {
+	color: #888;
+}
+
 .accordion-body {
 	.btn-outline-secondary {
 			border: pxToRem(1) solid #cacaca;
@@ -205,7 +227,7 @@ body {
 
 // add_resource
 form {
-	.form-control, .form-select {
+	.form-control {
 		@include placeholder {
 			color: #888;
 		}
@@ -218,15 +240,7 @@ form {
 			border-color: #a1a1a1;
 		}
 	}
-	.form-select {
-		background-image: url("https://api.iconify.design/typcn/arrow-sorted-down.svg?color=%23cacaca");
-		-webkit-appearance: none;
-		option {
-			background-color: #596164;
-		}
-	}
 }
-
 
 @media only screen and (max-width: 500px) {
 	.main header nav ul {

@@ -91,26 +91,28 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/background.jpg") no-repeat center/cover;
+  background: url("../img/backgound.webp") no-repeat center/cover;
   opacity: 0.3;
 }
 
 .searchBar input[type=search] {
   background: transparent;
   border-right: none;
+  border-color: #888;
   box-shadow: none;
   color: #cacaca;
 }
 .searchBar input[type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
-  height: 10px;
-  width: 10px;
-  background-image: url("https://api.iconify.design/ep/close-bold.svg?color=%23cacaca");
-  background-size: 10px 10px;
+  cursor: pointer;
+  height: 0.9375rem;
+  width: 0.9375rem;
+  background-image: url("https://api.iconify.design/ep/close-bold.svg?color=%23888");
+  background-size: 0.9375rem 0.9375rem;
 }
 .searchBar .btn-outline-secondary {
-  border-color: #cacaca;
+  border-color: #888;
 }
 
 .spanFilter {
@@ -4135,64 +4137,204 @@ body {
   border: none;
 }
 .accordion .accordion-item:nth-child(1) {
-  -webkit-animation: slide-in-up 0.9s ease-in-out;
-          animation: slide-in-up 0.9s ease-in-out;
+  -webkit-animation: slide-in-up 0.7s ease-in-out;
+          animation: slide-in-up 0.7s ease-in-out;
 }
 .accordion .accordion-item:nth-child(2) {
-  -webkit-animation: slide-in-up 1.8s ease-in-out;
-          animation: slide-in-up 1.8s ease-in-out;
+  -webkit-animation: slide-in-up 1.4s ease-in-out;
+          animation: slide-in-up 1.4s ease-in-out;
 }
 .accordion .accordion-item:nth-child(3) {
-  -webkit-animation: slide-in-up 2.7s ease-in-out;
-          animation: slide-in-up 2.7s ease-in-out;
+  -webkit-animation: slide-in-up 2.1s ease-in-out;
+          animation: slide-in-up 2.1s ease-in-out;
 }
 .accordion .accordion-item:nth-child(4) {
-  -webkit-animation: slide-in-up 3.6s ease-in-out;
-          animation: slide-in-up 3.6s ease-in-out;
+  -webkit-animation: slide-in-up 2.8s ease-in-out;
+          animation: slide-in-up 2.8s ease-in-out;
 }
 .accordion .accordion-item:nth-child(5) {
-  -webkit-animation: slide-in-up 4.5s ease-in-out;
-          animation: slide-in-up 4.5s ease-in-out;
+  -webkit-animation: slide-in-up 3.5s ease-in-out;
+          animation: slide-in-up 3.5s ease-in-out;
 }
 .accordion .accordion-item:nth-child(6) {
-  -webkit-animation: slide-in-up 5.4s ease-in-out;
-          animation: slide-in-up 5.4s ease-in-out;
+  -webkit-animation: slide-in-up 4.2s ease-in-out;
+          animation: slide-in-up 4.2s ease-in-out;
 }
 .accordion .accordion-item:nth-child(7) {
+  -webkit-animation: slide-in-up 4.9s ease-in-out;
+          animation: slide-in-up 4.9s ease-in-out;
+}
+.accordion .accordion-item:nth-child(8) {
+  -webkit-animation: slide-in-up 5.6s ease-in-out;
+          animation: slide-in-up 5.6s ease-in-out;
+}
+.accordion .accordion-item:nth-child(9) {
   -webkit-animation: slide-in-up 6.3s ease-in-out;
           animation: slide-in-up 6.3s ease-in-out;
 }
-.accordion .accordion-item:nth-child(8) {
-  -webkit-animation: slide-in-up 7.2s ease-in-out;
-          animation: slide-in-up 7.2s ease-in-out;
-}
-.accordion .accordion-item:nth-child(9) {
-  -webkit-animation: slide-in-up 8.1s ease-in-out;
-          animation: slide-in-up 8.1s ease-in-out;
-}
 .accordion .accordion-item:nth-child(10) {
-  -webkit-animation: slide-in-up 9s ease-in-out;
-          animation: slide-in-up 9s ease-in-out;
+  -webkit-animation: slide-in-up 7s ease-in-out;
+          animation: slide-in-up 7s ease-in-out;
 }
 .accordion .accordion-item:nth-child(11) {
-  -webkit-animation: slide-in-up 9.9s ease-in-out;
-          animation: slide-in-up 9.9s ease-in-out;
+  -webkit-animation: slide-in-up 7.7s ease-in-out;
+          animation: slide-in-up 7.7s ease-in-out;
 }
 .accordion .accordion-item:nth-child(12) {
-  -webkit-animation: slide-in-up 10.8s ease-in-out;
-          animation: slide-in-up 10.8s ease-in-out;
+  -webkit-animation: slide-in-up 8.4s ease-in-out;
+          animation: slide-in-up 8.4s ease-in-out;
 }
 .accordion .accordion-item:nth-child(13) {
-  -webkit-animation: slide-in-up 11.7s ease-in-out;
-          animation: slide-in-up 11.7s ease-in-out;
+  -webkit-animation: slide-in-up 9.1s ease-in-out;
+          animation: slide-in-up 9.1s ease-in-out;
 }
 .accordion .accordion-item:nth-child(14) {
+  -webkit-animation: slide-in-up 9.8s ease-in-out;
+          animation: slide-in-up 9.8s ease-in-out;
+}
+.accordion .accordion-item:nth-child(15) {
+  -webkit-animation: slide-in-up 10.5s ease-in-out;
+          animation: slide-in-up 10.5s ease-in-out;
+}
+.accordion .accordion-item:nth-child(16) {
+  -webkit-animation: slide-in-up 11.2s ease-in-out;
+          animation: slide-in-up 11.2s ease-in-out;
+}
+.accordion .accordion-item:nth-child(17) {
+  -webkit-animation: slide-in-up 11.9s ease-in-out;
+          animation: slide-in-up 11.9s ease-in-out;
+}
+.accordion .accordion-item:nth-child(18) {
   -webkit-animation: slide-in-up 12.6s ease-in-out;
           animation: slide-in-up 12.6s ease-in-out;
 }
-.accordion .accordion-item:nth-child(15) {
-  -webkit-animation: slide-in-up 13.5s ease-in-out;
-          animation: slide-in-up 13.5s ease-in-out;
+.accordion .accordion-item:nth-child(19) {
+  -webkit-animation: slide-in-up 13.3s ease-in-out;
+          animation: slide-in-up 13.3s ease-in-out;
+}
+.accordion .accordion-item:nth-child(20) {
+  -webkit-animation: slide-in-up 14s ease-in-out;
+          animation: slide-in-up 14s ease-in-out;
+}
+.accordion .accordion-item:nth-child(21) {
+  -webkit-animation: slide-in-up 14.7s ease-in-out;
+          animation: slide-in-up 14.7s ease-in-out;
+}
+.accordion .accordion-item:nth-child(22) {
+  -webkit-animation: slide-in-up 15.4s ease-in-out;
+          animation: slide-in-up 15.4s ease-in-out;
+}
+.accordion .accordion-item:nth-child(23) {
+  -webkit-animation: slide-in-up 16.1s ease-in-out;
+          animation: slide-in-up 16.1s ease-in-out;
+}
+.accordion .accordion-item:nth-child(24) {
+  -webkit-animation: slide-in-up 16.8s ease-in-out;
+          animation: slide-in-up 16.8s ease-in-out;
+}
+.accordion .accordion-item:nth-child(25) {
+  -webkit-animation: slide-in-up 17.5s ease-in-out;
+          animation: slide-in-up 17.5s ease-in-out;
+}
+.accordion .accordion-item:nth-child(26) {
+  -webkit-animation: slide-in-up 18.2s ease-in-out;
+          animation: slide-in-up 18.2s ease-in-out;
+}
+.accordion .accordion-item:nth-child(27) {
+  -webkit-animation: slide-in-up 18.9s ease-in-out;
+          animation: slide-in-up 18.9s ease-in-out;
+}
+.accordion .accordion-item:nth-child(28) {
+  -webkit-animation: slide-in-up 19.6s ease-in-out;
+          animation: slide-in-up 19.6s ease-in-out;
+}
+.accordion .accordion-item:nth-child(29) {
+  -webkit-animation: slide-in-up 20.3s ease-in-out;
+          animation: slide-in-up 20.3s ease-in-out;
+}
+.accordion .accordion-item:nth-child(30) {
+  -webkit-animation: slide-in-up 21s ease-in-out;
+          animation: slide-in-up 21s ease-in-out;
+}
+.accordion .accordion-item:nth-child(31) {
+  -webkit-animation: slide-in-up 21.7s ease-in-out;
+          animation: slide-in-up 21.7s ease-in-out;
+}
+.accordion .accordion-item:nth-child(32) {
+  -webkit-animation: slide-in-up 22.4s ease-in-out;
+          animation: slide-in-up 22.4s ease-in-out;
+}
+.accordion .accordion-item:nth-child(33) {
+  -webkit-animation: slide-in-up 23.1s ease-in-out;
+          animation: slide-in-up 23.1s ease-in-out;
+}
+.accordion .accordion-item:nth-child(34) {
+  -webkit-animation: slide-in-up 23.8s ease-in-out;
+          animation: slide-in-up 23.8s ease-in-out;
+}
+.accordion .accordion-item:nth-child(35) {
+  -webkit-animation: slide-in-up 24.5s ease-in-out;
+          animation: slide-in-up 24.5s ease-in-out;
+}
+.accordion .accordion-item:nth-child(36) {
+  -webkit-animation: slide-in-up 25.2s ease-in-out;
+          animation: slide-in-up 25.2s ease-in-out;
+}
+.accordion .accordion-item:nth-child(37) {
+  -webkit-animation: slide-in-up 25.9s ease-in-out;
+          animation: slide-in-up 25.9s ease-in-out;
+}
+.accordion .accordion-item:nth-child(38) {
+  -webkit-animation: slide-in-up 26.6s ease-in-out;
+          animation: slide-in-up 26.6s ease-in-out;
+}
+.accordion .accordion-item:nth-child(39) {
+  -webkit-animation: slide-in-up 27.3s ease-in-out;
+          animation: slide-in-up 27.3s ease-in-out;
+}
+.accordion .accordion-item:nth-child(40) {
+  -webkit-animation: slide-in-up 28s ease-in-out;
+          animation: slide-in-up 28s ease-in-out;
+}
+.accordion .accordion-item:nth-child(41) {
+  -webkit-animation: slide-in-up 28.7s ease-in-out;
+          animation: slide-in-up 28.7s ease-in-out;
+}
+.accordion .accordion-item:nth-child(42) {
+  -webkit-animation: slide-in-up 29.4s ease-in-out;
+          animation: slide-in-up 29.4s ease-in-out;
+}
+.accordion .accordion-item:nth-child(43) {
+  -webkit-animation: slide-in-up 30.1s ease-in-out;
+          animation: slide-in-up 30.1s ease-in-out;
+}
+.accordion .accordion-item:nth-child(44) {
+  -webkit-animation: slide-in-up 30.8s ease-in-out;
+          animation: slide-in-up 30.8s ease-in-out;
+}
+.accordion .accordion-item:nth-child(45) {
+  -webkit-animation: slide-in-up 31.5s ease-in-out;
+          animation: slide-in-up 31.5s ease-in-out;
+}
+.accordion .accordion-item:nth-child(46) {
+  -webkit-animation: slide-in-up 32.2s ease-in-out;
+          animation: slide-in-up 32.2s ease-in-out;
+}
+.accordion .accordion-item:nth-child(47) {
+  -webkit-animation: slide-in-up 32.9s ease-in-out;
+          animation: slide-in-up 32.9s ease-in-out;
+}
+.accordion .accordion-item:nth-child(48) {
+  -webkit-animation: slide-in-up 33.6s ease-in-out;
+          animation: slide-in-up 33.6s ease-in-out;
+}
+.accordion .accordion-item:nth-child(49) {
+  -webkit-animation: slide-in-up 34.3s ease-in-out;
+          animation: slide-in-up 34.3s ease-in-out;
+}
+.accordion .accordion-item:nth-child(50) {
+  -webkit-animation: slide-in-up 35s ease-in-out;
+          animation: slide-in-up 35s ease-in-out;
 }
 .accordion .accordion-item .accordion-button::after,
 .accordion .accordion-item .accordion-button:not(.collapsed)::after {
@@ -4213,6 +4355,26 @@ body {
 .input-group-text {
   border-radius: 20% 0% 0% 20%;
   background: transparent;
+}
+
+.select2-container--default .select2-selection--single {
+  background: transparent;
+  border: none;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field, .select2-container--default .select2-results > .select2-results__options {
+  background: rgba(1, 1, 1, 0.1);
+  color: #a5a5a5;
+  border: none;
+  outline: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #cacaca;
+}
+
+.select2-results__option--selectable {
+  color: #888;
 }
 
 .accordion-body .btn-outline-secondary {
@@ -4275,34 +4437,27 @@ body {
     transform: translateY(0);
   }
 }
-form .form-control, form .form-select {
+form .form-control {
   background-color: transparent;
   color: #cacaca;
 }
-form .form-control::-webkit-input-placeholder, form .form-select::-webkit-input-placeholder {
+form .form-control::-webkit-input-placeholder {
   color: #888;
 }
-form .form-control:-moz-placeholder, form .form-select:-moz-placeholder {
+form .form-control:-moz-placeholder {
   color: #888;
 }
-form .form-control::-moz-placeholder, form .form-select::-moz-placeholder {
+form .form-control::-moz-placeholder {
   color: #888;
 }
-form .form-control:-ms-input-placeholder, form .form-select:-ms-input-placeholder {
+form .form-control:-ms-input-placeholder {
   color: #888;
 }
-form .form-control:focus, form .form-select:focus {
+form .form-control:focus {
   background-color: transparent;
   color: #cacaca;
   box-shadow: 0 0 0 0.25rem rgba(89, 97, 100, 0.2);
   border-color: #a1a1a1;
-}
-form .form-select {
-  background-image: url("https://api.iconify.design/typcn/arrow-sorted-down.svg?color=%23cacaca");
-  -webkit-appearance: none;
-}
-form .form-select option {
-  background-color: #596164;
 }
 
 @media only screen and (max-width: 500px) {

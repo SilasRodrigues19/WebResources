@@ -45,7 +45,7 @@ class Resource extends CI_Controller
 		$this->load->view('templates/footer', $data);
 	}
 
-	public function add_resource()
+	public function new()
 	{
 		$data['title'] = 'Adicionar Recursos';
 
@@ -79,13 +79,13 @@ class Resource extends CI_Controller
 					redirect('/resource');
 				} else {
 					notify('', 'Erro ao adicionar recurso', 'danger', 'w-50');
-					redirect('/resource/add_resource');
+					redirect('/resource/new');
 				}
 			}
 
 			
 		$this->load->view('templates/header', $data);
-		$this->load->view('pages/add_resource', $data);
+		$this->load->view('pages/new', $data);
 		$this->load->view('templates/footer', $data);
 	}
 

@@ -12,10 +12,12 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('favicon-16x16.png'); ?>">
 		<link rel="manifest" href="<?= base_url('site.webmanifest'); ?>">
 		<title><?= $title; ?></title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css">
+		<link rel="stylesheet" href="<?= base_url('public/libraries/sweetalert2/sweetalert2.min.css'); ?>">
 		<link rel="stylesheet" href="<?= base_url('public/libraries/bootstrap/bootstrap.min.css'); ?>">
 		<link rel="stylesheet" href="<?= base_url('public/libraries/datatable/dataTables.min.css'); ?>">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+		<link rel="stylesheet" href="<?= base_url('public/libraries/animate/animate.min.css'); ?>">
+		<link rel="stylesheet" href="<?= base_url('public/libraries/select2/select2.min.css'); ?>">
+
 		<link rel="stylesheet" href="<?= base_url('public/css/style.css'); ?>">
 	</head>
 

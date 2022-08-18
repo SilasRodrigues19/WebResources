@@ -42,6 +42,17 @@ const handleSubmit = () => {
 	Swal.showLoading();
 };
 
+$(document).ready(function () {
+	$(".select2").select2({
+		placeholder: "Selecione a categoria",
+		language: {
+			noResults: function () {
+				return "Não encontramos categoria com esse filtro";
+			},
+		},
+	});
+});
+
 const showMessage = document.querySelector(".showMessage");
 
 if (showMessage.classList.contains("d-flex")) {

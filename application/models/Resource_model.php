@@ -23,9 +23,11 @@ class Resource_model extends CI_Model {
   public function showList($filter = false)
   {
 
-    if($filter) $filter = " AND C.resource_description LIKE '%$filter%'";
+    if($filter) $filter = " AND C.resource_description LIKE " . $this->db->escape('%' . $filter . '%') . " 
+    OR C.resource_name LIKE " . $this->db->escape('%' . $filter . '%') . " ";
+    
 
-    $select = "SELECT  C.*, CONCAT(C.resource_name, ' - ' , C.resource_description) AS resource_name_description, a.*
+    $select = "SELECT  C.*, CONCAT(C.resource_name, ' - ' , C.resource_description) AS resource_name_description, A.*
                 FROM category AS A
                 INNER JOIN resource_category AS B ON A.category_id = B.category_id
                 INNER JOIN resource AS C ON C.resource_id = B.resource_id
@@ -64,7 +66,7 @@ class Resource_model extends CI_Model {
   public function insertResource($dados)
   {
     $insert = "INSERT INTO resource (resource_name, resource_description, resource_link)
-              VALUES ('{$dados['resource_name']}', '{$dados['resource_description']}', '{$dados['resource_link']}')";
+              VALUES ('{$dados['resource_name']}', " . $this->db->escape($dados['resource_description']) . ", '{$dados['resource_link']}')";
 
     #echo $insert; exit();
 

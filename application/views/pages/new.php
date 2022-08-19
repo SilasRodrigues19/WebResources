@@ -52,7 +52,7 @@
               </select>
             </div>
           </div>
-          <button id="btnSubmit" name="btnSubmit" onclick="return handleSubmit();" type="submit" class="btn btn-secondary mt-4">Salvar</button>
+          <button id="btnSubmit" name="btnSubmit" onclick="return handleSubmit();" type="submit" class="btn btn-secondary btn-block w-100 mt-4">Salvar</button>
         </form>
 			</div>
 		</div>

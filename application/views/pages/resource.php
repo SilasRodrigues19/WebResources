@@ -86,13 +86,3 @@
 		</div>
 	</div>
 </main>
-
-<script>
-	const handleSearch = () => {
-	let formSubmit = document.querySelector("#formSubmit");
-	let searchInput = document.querySelector("#searchInput");
-
-	searchInput.value = '';
-	formSubmit.submit();
-};
-</script>

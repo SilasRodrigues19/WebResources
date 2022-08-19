@@ -4,6 +4,28 @@ let urlRegex =
 let regex = new RegExp(urlRegex);
 
 
+const showAlertBox = (title, text, icon) => {
+	Swal.fire({
+		title: title,
+		html: text,
+		icon: icon,
+		allowOutsideClick: false,
+		allowEscapeKey: false,
+		allowEnterKey: false,
+		showLoaderOnConfirm: true,
+		confirmButtonText: "Fechar",
+	});
+};
+
+const handleSearch = () => {
+	let formSubmit = document.querySelector("#formSubmit");
+	let searchInput = document.querySelector("#searchInput");
+
+	searchInput.value = "";
+	formSubmit.submit();
+};
+
+
 const handleSubmit = () => {
 	let act = document.querySelector("#act");
 
@@ -24,26 +46,23 @@ const handleSubmit = () => {
 			resource_link == "" ||
 			resource_value == ""
 		) {
-			//Swal.fire("", "Preencha todos os campos", "error");
-			Swal.fire({
-				title: "Existem campos não preenchidos",
-				text: "Certifique-se de preencher todos os campos",
-				icon: "error",
-				allowOutsideClick: false,
-				confirmButtonText: "Fechar",
-			});
+
+			showAlertBox("Existem campos não preenchidos",
+				"Certifique-se de preencher todos os campos",
+				"warning");
 			return false;
+
 	}
 	
 	if (!resource_link.match(regex)) {
-		Swal.fire({
-			title: "Formato inválido de URL",
-			text: "Informe um formato de URL válido, começando com http:// ou https://",
-			icon: "error",
-			allowOutsideClick: false,
-			confirmButtonText: "Fechar",
-		});
+
+		showAlertBox(
+			"Formato inválido de URL",
+			"Informe um formato de URL válido, começando com <span class='sweet_text'>http://</span> ou <span class='sweet_text'>https://</span>",
+			"error"
+		);
 		return false;
+
 	}
 	
 	Swal.fire({

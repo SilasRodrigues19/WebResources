@@ -24,12 +24,25 @@ const handleSubmit = () => {
 			resource_link == "" ||
 			resource_value == ""
 		) {
-			Swal.fire("", "Preencha os campos", "error");
+			//Swal.fire("", "Preencha todos os campos", "error");
+			Swal.fire({
+				title: "Existem campos não preenchidos",
+				text: "Certifique-se de preencher todos os campos",
+				icon: "error",
+				allowOutsideClick: false,
+				confirmButtonText: "Fechar",
+			});
 			return false;
 	}
 	
 	if (!resource_link.match(regex)) {
-		Swal.fire("", "Informe uma URL válida", "warning");
+		Swal.fire({
+			title: "Formato inválido de URL",
+			text: "Informe um formato de URL válido, começando com http:// ou https://",
+			icon: "error",
+			allowOutsideClick: false,
+			confirmButtonText: "Fechar",
+		});
 		return false;
 	}
 	

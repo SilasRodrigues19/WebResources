@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Resource extends CI_Controller
+class Resource extends MY_Controller
 {
 
 	public function __construct()
@@ -62,26 +62,26 @@ class Resource extends CI_Controller
 
 		$dados['resource_id'] = $this->input->post('resource_id');
 		
-			$dados['resource_name'] = $this->input->post('resource_name');
-			$dados['resource_description'] = $this->input->post('resource_description');
-			$dados['resource_link'] = $this->input->post('resource_link');
-			$dados['resource_category'] = $this->input->post('resource_category');
+		$dados['resource_name'] = $this->input->post('resource_name');
+		$dados['resource_description'] = $this->input->post('resource_description');
+		$dados['resource_link'] = $this->input->post('resource_link');
+		$dados['resource_category'] = $this->input->post('resource_category');
 
-			#var_dump($dados); exit(); 
+		#var_dump($dados); exit(); 
 
-			$btnSubmit = $this->input->post('btnSubmit');
+		$btnSubmit = $this->input->post('btnSubmit');
 
-			if(isset($btnSubmit)) {
-				$res = $this->mres->insertResource($dados);
+		if(isset($btnSubmit)) {
+			$res = $this->mres->insertResource($dados);
 
-				if($res) {
-					notify('', 'Recurso adicionado', 'success', 'w-50');
-					redirect('/resource');
-				} else {
-					notify('', 'Erro ao adicionar recurso', 'danger', 'w-50');
-					redirect('/resource/new');
-				}
+			if($res) {
+				notify('', 'Recurso adicionado', 'success', 'w-50');
+				redirect('/resource');
+			} else {
+				notify('', 'Erro ao adicionar recurso', 'danger', 'w-50');
+				redirect('/resource/new');
 			}
+		}
 
 			
 		$this->load->view('templates/header', $data);

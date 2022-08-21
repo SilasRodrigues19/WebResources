@@ -54,7 +54,6 @@ body {
 	position: relative;
 	min-height: 100vh;
 	width: 100%;
-	padding: 10rem 0;
 	background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
 	color: #cacaca;
 	header {
@@ -212,6 +211,19 @@ body {
 
 .sweet_text {
 	color: #7066e0;
+}
+
+.footer {
+	position: relative;
+	left: 0;
+	bottom: 0;
+	background: rgba(1, 1, 1, .03);
+	backdrop-filter: blur(pxToRem(25));
+	border-top: pxToRem(1) solid rgba(1, 1, 1, .08);
+	min-height: 8vh;
+	padding: 2rem 0;
+	margin-top: 10rem;
+	@include flexCenterCol;
 }
 
 @keyframes slide-in-up {

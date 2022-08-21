@@ -1,3 +1,14 @@
+		
+<footer class="footer">
+	<p>Copyright &copy; Silas Rodrigues. Todos os direitos reservados.</p>
+	<ul class="social">
+		<hr>
+		<a href="https://github.com/SilasRodrigues19/WebResources" target="_blank">
+			Contribua com o projeto <span class="iconify" data-icon="ant-design:github-outlined"></span>
+		</a>
+	</ul>
+</footer>
+</main>		
 		<script src="<?= base_url('public/libraries/sweetalert2/sweetalert2.min.js'); ?>"></script>
 		<script src="<?= base_url('public/libraries/datatable/dataTables.min.js'); ?>"></script>
 		<script src="<?= base_url('public/libraries/jquery/jquery.min.js'); ?>"></script>

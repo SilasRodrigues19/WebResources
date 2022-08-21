@@ -4,10 +4,11 @@
 	justify-content: $justify_content;
 }
 
-@mixin flexCenter2 {
+@mixin flexCenterCol {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	flex-wrap: wrap;
 }
 

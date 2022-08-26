@@ -55,6 +55,7 @@ body {
   z-index: 1;
   position: relative;
   min-height: 100vh;
+  padding-top: 10rem;
   width: 100%;
   background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
   color: #cacaca;
@@ -74,7 +75,7 @@ body {
 .main header nav ul {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 0 2.1875rem;
   margin: 1.25rem auto;
 }
@@ -112,6 +113,41 @@ body {
 }
 .searchBar .btn-outline-secondary {
   border-color: #888;
+}
+
+#changeLogModal {
+  background: rgba(1, 1, 1, 0.7);
+}
+
+.modal {
+  --bs-modal-bg: transparent;
+}
+.modal .btn-close {
+  background: url("https://api.iconify.design/ep/circle-close.svg?color=%23cacaca") center/1.5rem auto no-repeat;
+}
+.modal .btn-close:focus {
+  box-shadow: none;
+}
+.modal ::-moz-selection {
+  background: #111;
+  color: #cacaca;
+}
+.modal ::selection {
+  background: #111;
+  color: #cacaca;
+}
+.modal .modal-content {
+  max-height: 30rem;
+  overflow: auto;
+}
+
+.tooltip-inner {
+  background-color: #6c757d;
+  color: #cacaca;
+}
+
+.tooltip-arrow::before {
+  --bs-tooltip-bg: transparent;
 }
 
 .spanFilter {
@@ -4376,6 +4412,14 @@ body {
   color: #888;
 }
 
+.badge-feature {
+  color: rgba(0, 144, 224, 0.5019607843);
+}
+
+.badge-bugfix {
+  color: rgba(214, 66, 66, 0.5019607843);
+}
+
 .accordion-body .btn-outline-secondary {
   border: 0.0625rem solid #cacaca;
   border-left: none;
@@ -4483,6 +4527,11 @@ form .form-control:focus {
 
 @media only screen and (max-width: 500px) {
   .main header nav ul {
-    gap: 3rem;
+    gap: 1rem;
+    margin-right: 0.1875rem;
+  }
+  .main header nav ul li:first-child {
+    display: flex;
+    gap: 0.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

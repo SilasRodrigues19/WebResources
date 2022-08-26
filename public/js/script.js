@@ -25,7 +25,6 @@ const handleSearch = () => {
 	formSubmit.submit();
 };
 
-
 const handleSubmit = () => {
 	let act = document.querySelector("#act");
 
@@ -75,6 +74,7 @@ const handleSubmit = () => {
 };
 
 $(document).ready(function () {
+	
 	$(".select2").select2({
 		placeholder: "Selecione a categoria",
 		language: {
@@ -83,6 +83,18 @@ $(document).ready(function () {
 			},
 		},
 	});
+
+	$('[data-toggle="tooltip"]').tooltip();
+
+	$("#triggerChangelogModal").on("click", function () {
+		$("#changeLogModal").fadeIn("slow");
+		$("#changeLogModal").css({ display: "flex", "align-items": "center" });
+	});
+
+	$("#changeLogModal").on("click", '[data-bs-dismiss="modal"]', function () {
+		$("#changeLogModal").fadeOut("slow");
+	});
+
 });
 
 const showMessage = document.querySelector(".showMessage");

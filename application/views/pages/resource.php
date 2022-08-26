@@ -3,10 +3,14 @@
 		<nav class="nav-bar">
 			<ul class="d-flex justify-content-between flex-row-reverse">
 					<li>
-						<a href="<?= base_url('/resource/new'); ?>">
-							<span class="iconify" data-icon="eos-icons:content-new" data-width="20" data-height="20"></span>
+						<button data-toggle="tooltip" data-placement="bottom" title="Changelog" type="button" id="triggerChangelogModal" class="btn btn-outline-secondary">
+							<span class="iconify" data-icon="iconoir:google-docs"></span>
+						</button>
+						<a data-toggle="tooltip" data-placement="bottom" title="Novo recurso" class="btn btn-outline-secondary" href="<?= base_url('/resource/new'); ?>">
+							<span class="iconify" data-icon="eos-icons:content-new"></span>
 						</a>
 					</li>
+					
 					<li>
 						<form action="" method="POST" id="formSubmit">
 							<div class="input-group searchBar">
@@ -18,9 +22,87 @@
 							</div>
 						</form>
 					</li>
+					
 			</ul>
+						
 		</nav>
 	</header>
+
+	<div class="m-4">
+		<div class="modal hide" id="changeLogModal" data-bs-backdrop="static" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title w-100 m-auto text-center">Registro de alterações</h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					
+					<div class="modal-body">
+						<p class="text-secondary"><small>Todas as mudanças notáveis ​​neste projeto serão documentadas neste arquivo.</small></p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.0.1] - 15/08/2022 Favicon adicionado
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.0.2] - 15/08/2022 Melhoria de elementos do formulário em dispositivos mobile
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.1.0] - 16/08/2022 Adicionado filtro para buscar recursos
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.0] - 16/08/2022 Adicionado filtro para buscar pesquisa por categorias existentes
+						 </p>
+						 <p>
+							<span class="iconify badge-bugfix" data-icon="foundation:pricetag-multiple"></span>[0.2.1] - 17/08/2022 Correção de função depreciada para ser suportada pelo SASS 2.0
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.2] - 18/08/2022 Criação da página de erro customizada
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.3] - 18/08/2022 Customização dos alertas do Sweet para uma melhor experiência do usuário
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
+						 </p>
+					</div>
+					
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+	</div>
+
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">

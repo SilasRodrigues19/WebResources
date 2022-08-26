@@ -3,8 +3,8 @@
 		<nav class="nav-bar">
 			<ul>
 					<li>
-						<a href="<?= base_url('/resource'); ?>">
-							<span class="iconify" data-icon="ic:baseline-arrow-back-ios" data-width="20" data-height="20"></span>
+						<a data-toggle="tooltip" data-placement="bottom" title="Voltar" class="btn btn-outline-secondary m-auto" href="<?= base_url('/resource'); ?>">
+							<span class="iconify" data-icon="eva:arrow-ios-back-fill" data-width="20" data-height="20"></span>
 						</a>
 					</li>
 			</ul>

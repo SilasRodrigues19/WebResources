@@ -85,9 +85,9 @@ Technologies used in the project.
 - [Iconify Design](https://iconify.design)
 - [Select2](https://select2.org)
 
-### Plugins
+### Database Management
 
-- [DataTable](https://datatables.net)
+- [MySQL](https://www.mysql.com)
 
 ### Font Script
 

@@ -73,6 +73,10 @@ The main sections and features are described below:
 
 Technologies used in the project.
 
+### Technologies
+
+- [SASS](https://sass-lang.com)
+
 ### Frameworks
 
 - [Bootstrap](https://getbootstrap.com)

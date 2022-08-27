@@ -9,7 +9,7 @@
 <samp>
 <p align="center">
   <a href="https://github.com/SilasRodrigues19/WebResources">
-    <img src="./favicon.ico" alt="Logo" width="80" height="80">
+    <img src="./favicon.ico" alt="Logo">
   </a>
 
   <h3 align="center">Web Resources</h3>

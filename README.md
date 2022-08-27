@@ -8,7 +8,7 @@
 <br />
 <samp>
 <p align="center">
-  <a href="https://github.com/SilasRodrigues19/WebResources">
+  <a href="http://webresources.epizy.com">
     <img src="./favicon.ico" alt="Logo">
   </a>
 

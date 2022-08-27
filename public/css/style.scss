@@ -9,9 +9,9 @@
 
 a {
 	text-decoration: none;
-	color: #888;
+	color: $lightGrayDarker;
 	&:hover {
-		color: #cacaca;
+		color: $lightGrayHigher;
 	}
 }
 
@@ -29,14 +29,14 @@ li {
 	background-color: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {  
 	border-radius: pxToRem(10);
 	background-color: #868f96;
 }
 
 ::selection {
 	background: #5e024a;
-	color: #cacaca;
+	color: $lightGrayHigher;
 }
 
 html {
@@ -57,7 +57,7 @@ body {
 	padding-top: 10rem;
 	width: 100%;
 	background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
-	color: #cacaca;
+	color: $lightGrayHigher;
 	header {
 		position: fixed;
 		left: 0;
@@ -65,9 +65,9 @@ body {
 		z-index: 100;
 		width: 100%;
 		min-height: 8vh;
-		background: rgba(1, 1, 1, .03);
+		background: rgba($color:#010101, $alpha: .03);
     backdrop-filter: blur(pxToRem(25));
-    border-bottom: pxToRem(1) solid rgba(1, 1, 1, .08);
+    border-bottom: pxToRem(1) solid rgba($color:#010101, $alpha: .08);
 		nav ul {
 			@include flexCenter(flex-end);
 			padding: 0 pxToRem(35);
@@ -78,15 +78,7 @@ body {
 		animation: slide-in 3.5s ease-in-out;
 	}
 	&:before {
-		content: "";
-		z-index: -1;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background: url("../img/backgound.webp") no-repeat center / cover;
-		opacity: 0.3;
+		@include backgroundBefore(fixed, .3, url("../img/backgound.webp") no-repeat center / cover)
 	}
 }
 
@@ -94,9 +86,9 @@ body {
 	input[type="search"] {
 		background: transparent;
 		border-right: none;
-		border-color: #888;
+		border-color: $lightGrayDarker;
     box-shadow: none;
-		color: #cacaca;
+		color: $lightGrayHigher;
 		&::-webkit-search-cancel-button {
 			-webkit-appearance: none;
 			appearance: none;
@@ -108,12 +100,12 @@ body {
 		}
 	}
 	.btn-outline-secondary {
-    border-color: #888;
+    border-color: $lightGrayDarker;
 	}
 }
 
 #changeLogModal {
-	background: rgba(1, 1, 1, .7);
+	background: rgba($color:#010101, $alpha: .7);;
 }
 
 .modal {
@@ -126,7 +118,7 @@ body {
 	}
 	::selection {
 		background: #111;
-		color: #cacaca;
+		color: $lightGrayHigher;
 	}
 	.modal-content {
 		max-height: 30rem;
@@ -136,12 +128,14 @@ body {
 
 .tooltip-inner {
   background-color: #6c757d;
-  color: #cacaca ;
+	margin-top: pxToRem(10);
+  color: $lightGrayHigher ;
 }
 
 .tooltip-arrow::before {
 	--bs-tooltip-bg: transparent;
 }
+
 
 .spanFilter {
 	border: .1rem dashed;
@@ -163,30 +157,31 @@ body {
 .accordion {
 	--bs-accordion-active-bg: transparent !important;
 	--bs-accordion-bg: transparent;
-	--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.05);
-	--bs-accordion-btn-color: #cacaca;
-	--bs-accordion-active-color: #a1a1a1;
-	--bs-accordion-active-bg: rgba(1, 1, 1, 0.2);
+	--bs-accordion-btn-focus-box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .05);
+	--bs-accordion-btn-color: $lightGrayHigher;
+	--bs-accordion-active-color: $mediumGray;
+	--bs-accordion-active-bg: rgba(1, 1, 1, .2);
 	.accordion-item {
 		border: none;
 		@include slideInUpAccordionItem;
-		.accordion-button::after,
-		.accordion-button:not(.collapsed)::after {
-			background: url("https://api.iconify.design/iconoir/nav-arrow-down.svg?color=%23cacaca")
+		.accordion-button {
+			&:after, &:not(.collapsed)::after {
+				background: url("https://api.iconify.design/iconoir/nav-arrow-down.svg?color=%23cacaca")
 				no-repeat center center / contain;
 				transition: all .4s linear;
-		}
-		.accordion-button:is(.collapsed) {
-			color: #cacaca;
-		}
-
-		.accordion-button:not(.collapsed) {
-			color: #f1f1f1;
-			> p {
-				transform: translateX(pxToRem(15));
-				transition: transform 0.6s ease-in-out;
+			}
+			&:is(.collapsed) {
+				color: $lightGrayHigher;
+			}
+			&:not(.collapsed) {
+				color: #f1f1f1;
+				> p {
+					transform: translateX(pxToRem(15));
+					transition: transform .6s ease-in-out;
+				}
 			}
 		}
+
 	}
 }
 
@@ -201,18 +196,18 @@ body {
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field, .select2-container--default .select2-results>.select2-results__options {
-	background: rgba(1, 1, 1, .1);
+	background: rgba($color:#010101, $alpha: .1);
 	color: #a5a5a5;
 	border: none;
 	outline: none;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-	color: #cacaca;
+	color: $lightGrayHigher;
 }
 
 .select2-results__option--selectable {
-	color: #888;
+	color: $lightGrayDarker;
 }
 
 .badge-feature {
@@ -225,15 +220,15 @@ body {
 
 .accordion-body {
 	.btn-outline-secondary {
-			border: pxToRem(1) solid #cacaca;
+			border: pxToRem(1) solid $lightGrayHigher;
 			border-left: none;
 			border-radius: 0 20% 20% 0%;
-			color: #cacaca;
+			color: $lightGrayHigher;
 			&:hover,
 			&:focus {
 				box-shadow: none;
 				background: transparent;
-				border-color: #cacaca;
+				border-color: $lightGrayHigher;
 			}
 			&:hover svg {
 				transform: scale(1.1);
@@ -245,7 +240,7 @@ body {
 		overflow: hidden;
 		white-space: nowrap;
 		@include placeholder {
-			color: #cacaca;
+			color: $lightGrayHigher;
 		}
 	}
 }
@@ -258,9 +253,9 @@ body {
 	position: relative;
 	left: 0;
 	bottom: 0;
-	background: rgba(1, 1, 1, .03);
+	background: rgba($color:#010101, $alpha: .03);
 	backdrop-filter: blur(pxToRem(25));
-	border-top: pxToRem(1) solid rgba(1, 1, 1, .08);
+	border-top: pxToRem(1) solid rgba($color:#010101, $alpha: .08);
 	min-height: 8vh;
 	padding: 2rem 0;
 	margin-top: 10rem;
@@ -286,15 +281,15 @@ body {
 form {
 	.form-control {
 		@include placeholder {
-			color: #888;
+			color: $lightGrayDarker;
 		}
 		background-color: transparent;
-		color: #cacaca;
+		color: $lightGrayHigher;
 		&:focus {
 			background-color: transparent;
-			color: #cacaca;
-			box-shadow: 0 0 0 0.25rem rgba(89, 97, 100, .2);
-			border-color: #a1a1a1;
+			color: $lightGrayHigher;
+			box-shadow: 0 0 0 0.25rem rgba($color:#596164, $alpha: .2);
+			border-color: $mediumGray;
 		}
 	}
 }

@@ -63,36 +63,6 @@
 						 <p>
 							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
 						 </p>
-						 <p>
-							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
-						 </p>
-						 <p>
-							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
-						 </p>
-						 <p>
-							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
-						 </p>
-						 <p>
-							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
-						 </p>
-						 <p>
-							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
-						 </p>
-						 <p>
-							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
-						 </p>
-						 <p>
-							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
-						 </p>
-						 <p>
-							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
-						 </p>
-						 <p>
-							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
-						 </p>
-						 <p>
-							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
-						 </p>
 					</div>
 					
 					<div class="modal-footer">

@@ -8270,6 +8270,12 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
 }
+.footer .icons span {
+  display: inline;
+}
+.footer .icons span:not(:first-child):before {
+  content: " | ";
+}
 
 @-webkit-keyframes slide-in-up {
   from {

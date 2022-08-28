@@ -4,9 +4,23 @@
 	<p>Feito por <a href="https://github.com/SilasRodrigues19" target="_blank">Silas Rodrigues</a></p>
 	<ul class="social">
 		<hr>
-		<a href="https://github.com/SilasRodrigues19/WebResources/pulls" target="_blank">
+		<li>
+			<a href="https://github.com/SilasRodrigues19/WebResources/pulls" target="_blank">
 			Contribua com o projeto <span class="iconify" data-icon="ant-design:github-outlined"></span>
 		</a>
+		</li>
+		<br>
+		<li class="text-center text-muted">
+			<p><span class="iconify" data-icon="bytesize:code"></span> Stack para devs</p>
+			<p class="icons">
+				<span data-toggle="tooltip" title="CodeIgniter"><span class="iconify" data-icon="simple-icons:codeigniter" data-width="20" data-height="20"></span></span>
+				<span data-toggle="tooltip" title="MySQL"><span class="iconify" data-icon="fontisto:mysql" data-width="20" data-height="20"></span></span>
+				<span data-toggle="tooltip" title="Bootstrap"><span class="iconify" data-icon="simple-icons:bootstrap" data-width="20" data-height="20"></span></span>
+				<span data-toggle="tooltip" title="SASS"><span class="iconify" data-icon="cib:sass-alt" data-width="20" data-height="20"></span></span>
+				<span data-toggle="tooltip" title="jQuery"><span class="iconify" data-icon="raphael:jquery" data-width="20" data-height="20"></span></span>
+				<span data-toggle="tooltip" title="JavaScript"><span class="iconify" data-icon="akar-icons:javascript-fill" data-width="20" data-height="20"></span></span>
+			</p>
+		</li>
 	</ul>
 </footer>	
 </main>

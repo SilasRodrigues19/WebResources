@@ -260,7 +260,16 @@ body {
 	padding: 2rem 0;
 	margin-top: 10rem;
 	@include flexCenterCol;
+	.icons {
+		 span {
+			display: inline;
+			&:not(:first-child):before {
+					content: " \007C  ";
+			}
+		}
+	}
 }
+
 
 @keyframes slide-in-up {
 	from {

@@ -55,6 +55,8 @@
         $title = 'Warning!';
     }
 
+    $title = '';
+
     $box = "<div class=\"col-md-6 py-4 my-2 d-flex justify-content-center w-100 showMessage\">
               <span class=\"$width text-center alert $type\" role=\"alert\">
               <span class=\"iconify mb-1\" data-icon=\"$icon\"></span> <strong> $title </strong> $msg

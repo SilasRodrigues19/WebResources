@@ -26,17 +26,20 @@
 
           <div class="form-group mt-4">
             <label for="resource_name">Nome do recurso</label>
-            <input autocomplete="off" type="text" class="form-control" id="resource_name" name="resource_name" placeholder="Insira um nome curto para o recurso">
+            <input autocomplete="off" type="text" class="form-control" id="resource_name" name="resource_name" placeholder="Insira um nome curto para o recurso"
+            value="<?= $fields['resource_name'] ?>">
           </div>
 
           <div class="form-group mt-4">
             <label for="resource_description">Descrição do recurso</label>
-            <input autocomplete="off" type="text" class="form-control" id="resource_description" name="resource_description" placeholder="Insira uma breve descrição">
+            <input autocomplete="off" type="text" class="form-control" id="resource_description" name="resource_description" placeholder="Insira uma breve descrição"
+            value="<?= $fields['resource_description'] ?>">
           </div>
 
           <div class="form-group mt-4">
             <label for="resource_link">Link do recurso</label>
-            <input autocomplete="off" type="text" class="form-control" id="resource_link" name="resource_link" placeholder="<?= $lastResource[0]['resource_link']; ?>">
+            <input autocomplete="off" type="text" class="form-control" id="resource_link" name="resource_link" placeholder="<?= $lastResource[0]['resource_link']; ?>"
+            value="<?= $fields['resource_link'] ?>">
           </div>
 
           <div class="form-group mt-4">
@@ -45,7 +48,11 @@
               <select name="resource_category" id="resource_category" class="form-control select2">
                 <option value="" selected disabled></option>
                   <?php foreach($showCategoryOption as $idx => $value): ?>
-                      <option value="<?= $showCategoryOption[$idx]['category_id']; ?>">
+                      <?php 
+                        $selected = false; 
+                        ($fields['resource_category'] == $showCategoryOption[$idx]['category_id']) ? $selected = " selected" : '';
+                      ?>
+                      <option value="<?= $showCategoryOption[$idx]['category_id']; ?>" <?= $selected ?>>
                         <?= $showCategoryOption[$idx]['category_description']; ?>
                       </option>
                   <?php endforeach; ?>

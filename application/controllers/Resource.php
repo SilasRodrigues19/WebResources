@@ -67,7 +67,9 @@ class Resource extends MY_Controller
 		$dados['resource_link'] = $this->input->post('resource_link');
 		$dados['resource_category'] = $this->input->post('resource_category');
 
-		#var_dump($dados); exit(); 
+		$data['fields'] = $dados;
+
+		#var_dump($data['fields']['resource_name']); exit(); 
 
 		$btnSubmit = $this->input->post('btnSubmit');
 
@@ -77,9 +79,6 @@ class Resource extends MY_Controller
 			if($res) {
 				notify('', 'Recurso adicionado', 'success', 'w-50');
 				redirect('/resource');
-			} else {
-				notify('', 'Erro ao adicionar recurso', 'danger', 'w-50');
-				redirect('/resource/new');
 			}
 		}
 

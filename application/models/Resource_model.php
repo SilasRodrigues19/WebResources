@@ -65,20 +65,30 @@ class Resource_model extends CI_Model {
   //INSERT INTO resource (resource_name, resource_description, resource_link)
   public function insertResource($dados)
   {
-    $insert = "INSERT INTO resource (resource_name, resource_description, resource_link)
-              VALUES ('{$dados['resource_name']}', " . $this->db->escape($dados['resource_description']) . ", '{$dados['resource_link']}')";
 
-    #echo $insert; exit();
+    $verify = "SELECT resource_link FROM resource WHERE resource_link = '".$dados['resource_link']."'";
+    $execute = $this->db->query($verify);
 
-    $execute = $this->db->query($insert);
+    if($execute->num_rows() > 0) {
+      notify('', 'Este link já foi cadastrado', 'warning', 'w-50');
+      return false;
+    } else {
+      
+          $insert = "INSERT INTO resource (resource_name, resource_description, resource_link)
+                    VALUES ('{$dados['resource_name']}', " . $this->db->escape($dados['resource_description']) . ", '{$dados['resource_link']}')";
+      
+          $execute = $this->db->query($insert);
+      
+          if($execute) {
+            $insert = "INSERT INTO resource_category (`category_id`, `resource_id`) VALUES ({$dados['resource_category']}, {$dados['resource_id']})";
+            $execute = $this->db->query($insert);
+            return true;
+          }
+      
+          return false;
 
-    if($execute) {
-      $insert = "INSERT INTO resource_category (`category_id`, `resource_id`) VALUES ({$dados['resource_category']}, {$dados['resource_id']})";
-      $execute = $this->db->query($insert);
-      return true;
     }
-
-    return false;
+    
 
 
   }

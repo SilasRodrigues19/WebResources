@@ -95,7 +95,7 @@ class Resource_model extends CI_Model {
 
   public function getLastResource()
   {
-    $select = "SELECT resource_link FROM resource ORDER BY created_at DESC LIMIT 1";
+    $select = "SELECT resource_link FROM resource ORDER BY RAND() LIMIT 1";
 
     $execute = $this->db->query($select);
 

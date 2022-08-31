@@ -128,14 +128,25 @@ body {
 
 .tooltip-inner {
   background-color: #6c757d;
-	margin-top: pxToRem(10);
-  color: $lightGrayHigher ;
+  color: $lightGrayHigher;
+	margin: pxToRem(10) 0;
 }
 
 .tooltip-arrow::before {
-	--bs-tooltip-bg: transparent;
+	--bs-tooltip-bg: #6c757d;
 }
 
+.bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+  top: pxToRem(-10);
+  border-width: var(--bs-tooltip-arrow-height) calc(var(--bs-tooltip-arrow-width) * 0.5) 0;
+  border-top-color: var(--bs-tooltip-bg);
+}
+
+.bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
+  bottom: pxToRem(-10);
+  border-width: 0 calc(var(--bs-tooltip-arrow-width) * 0.5) var(--bs-tooltip-arrow-height);
+  border-bottom-color: var(--bs-tooltip-bg);
+}
 
 .spanFilter {
 	border: .1rem dashed;

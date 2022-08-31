@@ -95,7 +95,27 @@ $(document).ready(function () {
 		$("#changeLogModal").fadeOut("slow");
 	});
 
+	$("#smoothScroll").click(function (event) {
+		event.preventDefault(),
+			$("html, body").animate(
+				{
+					scrollTop: 0,
+				},
+				200
+			);
+	});
+
 });
+
+document.addEventListener("scroll", () => {
+	const scrollToTop = document.querySelector("#smoothScroll");
+	let positionY = window.scrollY;
+	positionY < 100
+		? (scrollToTop.style.cssText = "bottom: -150px")
+		: (scrollToTop.style.cssText = "bottom: 50px");
+
+});
+
 
 const showMessage = document.querySelector(".showMessage");
 
@@ -104,3 +124,4 @@ if (showMessage.classList.contains("d-flex")) {
 		showMessage.classList.add("d-none");
 	}, 7500);
 }
+

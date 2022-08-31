@@ -144,7 +144,7 @@ body {
 .tooltip-inner {
   background-color: #6c757d;
   color: #cacaca;
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 .tooltip-arrow::before {
@@ -152,13 +152,13 @@ body {
 }
 
 .bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
-  top: -10px;
+  top: -0.625rem;
   border-width: var(--bs-tooltip-arrow-height) calc(var(--bs-tooltip-arrow-width) * 0.5) 0;
   border-top-color: var(--bs-tooltip-bg);
 }
 
 .bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
-  bottom: -10px;
+  bottom: -0.625rem;
   border-width: 0 calc(var(--bs-tooltip-arrow-width) * 0.5) var(--bs-tooltip-arrow-height);
   border-bottom-color: var(--bs-tooltip-bg);
 }
@@ -8276,6 +8276,7 @@ body {
   min-height: 8vh;
   padding: 2rem 0;
   margin-top: 10rem;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8286,7 +8287,28 @@ body {
   display: inline;
 }
 .footer .icons span:not(:first-child):before {
-  content: " | ";
+  content: "|";
+  margin: 0 0.5rem;
+}
+
+#smoothScroll {
+  position: fixed;
+  background: transparent;
+  border: solid 0.1875rem;
+  border-color: #888;
+  padding: 0.9375rem;
+  border-radius: 0.625rem;
+  bottom: 3.125rem;
+  right: 1.5625rem;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 0.625rem;
+  transition: all 0.9s;
+  bottom: -9.375rem;
+}
+#smoothScroll:hover {
+  background: #cacaca;
+  color: #111;
 }
 
 @-webkit-keyframes slide-in-up {

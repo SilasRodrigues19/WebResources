@@ -46,9 +46,8 @@ html {
 body {
 	height: 100%;
 	width: 100%;
-	font-family: "B612 Mono", monospace;
+	font-family: 'B612 Mono', monospace;
 }
-
 
 .main {
 	z-index: 1;
@@ -270,15 +269,37 @@ body {
 	min-height: 8vh;
 	padding: 2rem 0;
 	margin-top: 10rem;
+	text-align: center;
 	@include flexCenterCol;
 	.icons {
 		 span {
 			display: inline;
 			&:not(:first-child):before {
-					content: " \007C  ";
+					content: "\007C";
+					margin: 0 pxToRem(8);
 			}
 		}
 	}
+}
+
+#smoothScroll {
+    position: fixed;
+    background: transparent;
+    border: solid pxToRem(3);
+    border-color: $lightGrayDarker;
+    padding: pxToRem(15);
+    border-radius: pxToRem(10);
+    bottom: pxToRem(50);
+    right: pxToRem(25);
+    font-size: 1rem;
+    text-align: center;
+    line-height: pxToRem(10);
+    transition: all .9s;
+    bottom: pxToRem(-150);
+		&:hover {
+			background: $lightGrayHigher;
+			color: #111;
+		}
 }
 
 

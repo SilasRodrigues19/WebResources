@@ -1,11 +1,20 @@
 		
 <footer class="footer">
-	<p>Copyright &copy; 2022</p>
-	<p>Feito por <a href="https://github.com/SilasRodrigues19" target="_blank">Silas Rodrigues</a></p>
+	<p>Copyright &copy; <?= date('Y'); ?></p>
+	<p>Feito por <a href="https://github.com/SilasRodrigues19" target="_blank" rel="noreferrer">Silas Rodrigues</a></p>
+	<p>
+		Distribuído por: 
+		<a href="https://www.infinityfree.net" target="_blank" rel="noreferrer"><span class="iconify" data-icon="akar-icons:infinity"></span> 
+			Infinity Free,
+		</a>
+		<a href="https://github.com" target="_blank" rel="noreferrer"><span class="iconify" data-icon="akar-icons:github-fill"></span> 
+			GitHub
+		</a>
+	</p>
 	<ul class="social">
 		<hr>
 		<li>
-			<a href="https://github.com/SilasRodrigues19/WebResources/pulls" target="_blank">
+			<a href="https://github.com/SilasRodrigues19/WebResources/pulls" target="_blank" rel="noreferrer">
 			Contribua com o projeto <span class="iconify" data-icon="ant-design:github-outlined"></span>
 		</a>
 		</li>
@@ -23,6 +32,9 @@
 		</li>
 	</ul>
 </footer>	
+<a id="smoothScroll" href="#main">
+		<span class="iconify arrow-up" data-icon="bytesize:chevron-top" data-inline="false"></span>
+</a>
 </main>
 		<script src="<?= base_url('public/libraries/sweetalert2/sweetalert2.min.js'); ?>"></script>
 		<script src="<?= base_url('public/libraries/datatable/dataTables.min.js'); ?>"></script>

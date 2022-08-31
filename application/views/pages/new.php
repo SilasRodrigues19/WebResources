@@ -1,4 +1,4 @@
-<main class="main">
+<main class="main" id="main">
   <header>
 		<nav class="nav-bar">
 			<ul>

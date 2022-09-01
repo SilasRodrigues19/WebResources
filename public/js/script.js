@@ -12,7 +12,6 @@ const showAlertBox = (title, text, icon) => {
 		allowOutsideClick: false,
 		allowEscapeKey: false,
 		allowEnterKey: false,
-		showLoaderOnConfirm: true,
 		confirmButtonText: "Fechar",
 	});
 };
@@ -116,10 +115,9 @@ document.addEventListener("scroll", () => {
 
 });
 
-
 const showMessage = document.querySelector(".showMessage");
 
-if (showMessage.classList.contains("d-flex")) {
+if (document.body.contains(showMessage)) {
 	setTimeout(() => {
 		showMessage.classList.add("d-none");
 	}, 7500);

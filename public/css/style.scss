@@ -32,6 +32,11 @@ li {
 ::-webkit-scrollbar-thumb {  
 	border-radius: pxToRem(10);
 	background-color: #868f96;
+	display: none;
+}
+
+.showScrollbar ::-webkit-scrollbar-thumb{
+	display: initial;
 }
 
 ::selection {
@@ -184,6 +189,7 @@ body {
 				color: $lightGrayHigher;
 			}
 			&:not(.collapsed) {
+				--bs-accordion-border-color: transparent;
 				color: #f1f1f1;
 				> p {
 					transform: translateX(pxToRem(15));

@@ -29,6 +29,11 @@ li {
 ::-webkit-scrollbar-thumb {
   border-radius: 0.625rem;
   background-color: #868f96;
+  display: none;
+}
+
+.showScrollbar ::-webkit-scrollbar-thumb {
+  display: initial;
 }
 
 ::-moz-selection {
@@ -8188,6 +8193,7 @@ body {
   color: #cacaca;
 }
 .accordion .accordion-item .accordion-button:not(.collapsed) {
+  --bs-accordion-border-color: transparent;
   color: #f1f1f1;
 }
 .accordion .accordion-item .accordion-button:not(.collapsed) > p {

@@ -29,13 +29,13 @@ li {
 	background-color: transparent;
 }
 
-::-webkit-scrollbar-thumb {  
+::-webkit-scrollbar-thumb {
 	border-radius: pxToRem(10);
 	background-color: #868f96;
 	display: none;
 }
 
-.showScrollbar ::-webkit-scrollbar-thumb{
+.showScrollbar ::-webkit-scrollbar-thumb {
 	display: initial;
 }
 
@@ -51,7 +51,7 @@ html {
 body {
 	height: 100%;
 	width: 100%;
-	font-family: 'B612 Mono', monospace;
+	font-family: "B612 Mono", monospace;
 }
 
 .main {
@@ -69,20 +69,33 @@ body {
 		z-index: 100;
 		width: 100%;
 		min-height: 8vh;
-		background: rgba($color:#010101, $alpha: .03);
-    backdrop-filter: blur(pxToRem(25));
-    border-bottom: pxToRem(1) solid rgba($color:#010101, $alpha: .08);
+		background: rgba($color: #010101, $alpha: 0.03);
+		backdrop-filter: blur(pxToRem(25));
+		border-bottom: pxToRem(1) solid rgba($color: #010101, $alpha: 0.08);
 		nav ul {
+			@include mediaQueryMax(s) {
+				gap: 1rem;
+				margin-right: pxToRem(3);
+				li:first-child {
+					display: flex;
+					gap: 0.5rem;
+				}
+			}
 			@include flexCenter(flex-end);
 			padding: 0 pxToRem(35);
 			margin: pxToRem(20) auto;
 		}
 	}
-	.title, .showMessage {
+	.title,
+	.showMessage {
 		animation: slide-in 3.5s ease-in-out;
 	}
 	&:before {
-		@include backgroundBefore(fixed, .3, url("../img/backgound.webp") no-repeat center / cover)
+		@include backgroundBefore(
+			fixed,
+			0.3,
+			url("../img/background.webp") no-repeat center / cover
+		);
 	}
 }
 
@@ -91,7 +104,7 @@ body {
 		background: transparent;
 		border-right: none;
 		border-color: $lightGrayDarker;
-    box-shadow: none;
+		box-shadow: none;
 		color: $lightGrayHigher;
 		&::-webkit-search-cancel-button {
 			-webkit-appearance: none;
@@ -99,23 +112,24 @@ body {
 			cursor: pointer;
 			height: pxToRem(15);
 			width: pxToRem(15);
-			background-image: url('https://api.iconify.design/ep/close-bold.svg?color=%23888');
+			background-image: url("https://api.iconify.design/ep/close-bold.svg?color=%23888");
 			background-size: pxToRem(15) pxToRem(15);
 		}
 	}
 	.btn-outline-secondary {
-    border-color: $lightGrayDarker;
+		border-color: $lightGrayDarker;
 	}
 }
 
 #changeLogModal {
-	background: rgba($color:#010101, $alpha: .7);;
+	background: rgba($color: #010101, $alpha: 0.7);
 }
 
 .modal {
 	--bs-modal-bg: transparent;
 	.btn-close {
-		background: url("https://api.iconify.design/ep/circle-close.svg?color=%23cacaca") center/1.5rem auto no-repeat;
+		background: url("https://api.iconify.design/ep/circle-close.svg?color=%23cacaca")
+			center/1.5rem auto no-repeat;
 		&:focus {
 			box-shadow: none;
 		}
@@ -131,8 +145,8 @@ body {
 }
 
 .tooltip-inner {
-  background-color: #6c757d;
-  color: $lightGrayHigher;
+	background-color: #6c757d;
+	color: $lightGrayHigher;
 	margin: pxToRem(10) 0;
 }
 
@@ -140,20 +154,24 @@ body {
 	--bs-tooltip-bg: #6c757d;
 }
 
-.bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
-  top: pxToRem(-10);
-  border-width: var(--bs-tooltip-arrow-height) calc(var(--bs-tooltip-arrow-width) * 0.5) 0;
-  border-top-color: var(--bs-tooltip-bg);
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+	top: pxToRem(-10);
+	border-width: var(--bs-tooltip-arrow-height)
+		calc(var(--bs-tooltip-arrow-width) * 0.5) 0;
+	border-top-color: var(--bs-tooltip-bg);
 }
 
-.bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
-  bottom: pxToRem(-10);
-  border-width: 0 calc(var(--bs-tooltip-arrow-width) * 0.5) var(--bs-tooltip-arrow-height);
-  border-bottom-color: var(--bs-tooltip-bg);
+.bs-tooltip-bottom .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+	bottom: pxToRem(-10);
+	border-width: 0 calc(var(--bs-tooltip-arrow-width) * 0.5)
+		var(--bs-tooltip-arrow-height);
+	border-bottom-color: var(--bs-tooltip-bg);
 }
 
 .spanFilter {
-	border: .1rem dashed;
+	border: 0.1rem dashed;
 	padding: 0.3rem 0.5rem;
 	border-radius: 5%;
 	.closeFilter {
@@ -172,18 +190,19 @@ body {
 .accordion {
 	--bs-accordion-active-bg: transparent !important;
 	--bs-accordion-bg: transparent;
-	--bs-accordion-btn-focus-box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .05);
+	--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.05);
 	--bs-accordion-btn-color: $lightGrayHigher;
 	--bs-accordion-active-color: $mediumGray;
-	--bs-accordion-active-bg: rgba(1, 1, 1, .2);
+	--bs-accordion-active-bg: rgba(1, 1, 1, 0.2);
 	.accordion-item {
 		border: none;
 		@include slideInUpAccordionItem;
 		.accordion-button {
-			&:after, &:not(.collapsed)::after {
+			&:after,
+			&:not(.collapsed)::after {
 				background: url("https://api.iconify.design/iconoir/nav-arrow-down.svg?color=%23cacaca")
-				no-repeat center center / contain;
-				transition: all .4s linear;
+					no-repeat center center / contain;
+				transition: all 0.4s linear;
 			}
 			&:is(.collapsed) {
 				color: $lightGrayHigher;
@@ -193,11 +212,10 @@ body {
 				color: #f1f1f1;
 				> p {
 					transform: translateX(pxToRem(15));
-					transition: transform .6s ease-in-out;
+					transition: transform 0.6s ease-in-out;
 				}
 			}
 		}
-
 	}
 }
 
@@ -211,14 +229,17 @@ body {
 	border: none;
 }
 
-.select2-container--default .select2-search--dropdown .select2-search__field, .select2-container--default .select2-results>.select2-results__options {
-	background: rgba($color:#010101, $alpha: .1);
+.select2-container--default .select2-search--dropdown .select2-search__field,
+.select2-container--default .select2-results > .select2-results__options {
+	background: rgba($color: #010101, $alpha: 0.1);
 	color: #a5a5a5;
 	border: none;
 	outline: none;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
+.select2-container--default
+	.select2-selection--single
+	.select2-selection__rendered {
 	color: $lightGrayHigher;
 }
 
@@ -236,20 +257,20 @@ body {
 
 .accordion-body {
 	.btn-outline-secondary {
-			border: pxToRem(1) solid $lightGrayHigher;
-			border-left: none;
-			border-radius: 0 20% 20% 0%;
-			color: $lightGrayHigher;
-			&:hover,
-			&:focus {
-				box-shadow: none;
-				background: transparent;
-				border-color: $lightGrayHigher;
-			}
-			&:hover svg {
-				transform: scale(1.1);
-			}
-}
+		border: pxToRem(1) solid $lightGrayHigher;
+		border-left: none;
+		border-radius: 0 20% 20% 0%;
+		color: $lightGrayHigher;
+		&:hover,
+		&:focus {
+			box-shadow: none;
+			background: transparent;
+			border-color: $lightGrayHigher;
+		}
+		&:hover svg {
+			transform: scale(1.1);
+		}
+	}
 	.form-control {
 		background: transparent;
 		text-overflow: ellipsis;
@@ -269,45 +290,44 @@ body {
 	position: relative;
 	left: 0;
 	bottom: 0;
-	background: rgba($color:#010101, $alpha: .03);
+	background: rgba($color: #010101, $alpha: 0.03);
 	backdrop-filter: blur(pxToRem(25));
-	border-top: pxToRem(1) solid rgba($color:#010101, $alpha: .08);
+	border-top: pxToRem(1) solid rgba($color: #010101, $alpha: 0.08);
 	min-height: 8vh;
 	padding: 2rem 0;
 	margin-top: 10rem;
 	text-align: center;
 	@include flexCenterCol;
 	.icons {
-		 span {
+		span {
 			display: inline;
 			&:not(:first-child):before {
-					content: "\007C";
-					margin: 0 pxToRem(8);
+				content: "\007C";
+				margin: 0 pxToRem(8);
 			}
 		}
 	}
 }
 
 #smoothScroll {
-    position: fixed;
-    background: transparent;
-    border: solid pxToRem(3);
-    border-color: $lightGrayDarker;
-    padding: pxToRem(15);
-    border-radius: pxToRem(10);
-    bottom: pxToRem(50);
-    right: pxToRem(25);
-    font-size: 1rem;
-    text-align: center;
-    line-height: pxToRem(10);
-    transition: all .9s;
-    bottom: pxToRem(-150);
-		&:hover {
-			background: $lightGrayHigher;
-			color: #111;
-		}
+	position: fixed;
+	background: transparent;
+	border: solid pxToRem(3);
+	border-color: $lightGrayDarker;
+	padding: pxToRem(15);
+	border-radius: pxToRem(10);
+	bottom: pxToRem(50);
+	right: pxToRem(25);
+	font-size: 1rem;
+	text-align: center;
+	line-height: pxToRem(10);
+	transition: all 0.9s;
+	bottom: pxToRem(-150);
+	&:hover {
+		background: $lightGrayHigher;
+		color: #111;
+	}
 }
-
 
 @keyframes slide-in-up {
 	from {
@@ -335,19 +355,8 @@ form {
 		&:focus {
 			background-color: transparent;
 			color: $lightGrayHigher;
-			box-shadow: 0 0 0 0.25rem rgba($color:#596164, $alpha: .2);
+			box-shadow: 0 0 0 0.25rem rgba($color: #596164, $alpha: 0.2);
 			border-color: $mediumGray;
-		}
-	}
-}
-
-@media only screen and (max-width: 500px) {
-	.main header nav ul {
-		gap: 1rem;
-    margin-right: pxToRem(3);
-		li:first-child {
-			display: flex;
-			gap: .5rem;
 		}
 	}
 }

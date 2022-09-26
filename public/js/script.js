@@ -16,11 +16,11 @@ const showAlertBox = (title, text, icon) => {
 };
 
 const handleSearch = () => {
-	let formSubmit = document.querySelector("#formSubmit");
 	let searchInput = document.querySelector("#searchInput");
 
 	searchInput.value = "";
-	formSubmit.submit();
+	window.location.href = "./";
+	//formSubmit.submit();
 };
 
 const handleSubmit = () => {

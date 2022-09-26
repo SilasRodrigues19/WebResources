@@ -25,15 +25,14 @@ class Resource extends MY_Controller
 		$res = $this->mres->showResource();
 		$data['showResource'] = $res;
 
-		$btnSearch = $this->input->post('btnSearch');
-		$search = $this->input->post('search');
+		$search = $this->input->get('search');
 
 		$data['searchTerm'] = false;
 
-		if(isset($btnSearch)) {
+		if(strlen(trim($search)) > 0) {
 			$data['searchTerm'] = $search;
 		}
-		
+
 
 		$res = $this->mres->showList($search);
 

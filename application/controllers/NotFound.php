@@ -23,7 +23,6 @@ class NotFound extends MY_Controller
 
 		$this->load->view('templates/header', $data);
     $this->load->view('notfound', $data);
-		$this->load->view('templates/footer', $data);
 
 	}
 

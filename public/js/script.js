@@ -8,6 +8,12 @@ const showAlertBox = (title, text, icon) => {
 		title: title,
 		html: text,
 		icon: icon,
+		showClass: {
+			popup: "animate__animated animate__backInDown",
+		},
+		hideClass: {
+			popup: "animate__animated animate__backOutDown",
+		},
 		allowOutsideClick: false,
 		allowEscapeKey: false,
 		allowEnterKey: false,

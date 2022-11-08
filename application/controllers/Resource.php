@@ -29,11 +29,6 @@ class Resource extends MY_Controller
 
 		$data['searchTerm'] = false;
 
-		if(strlen(trim($search)) > 0) {
-			$data['searchTerm'] = $search;
-		}
-
-
 		$res = $this->mres->showList($search);
 
 		$data['showList'] = $res;

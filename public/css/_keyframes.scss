@@ -1,0 +1,12 @@
+@keyframes revealItems {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+        transition: all 1s;
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}

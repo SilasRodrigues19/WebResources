@@ -314,13 +314,20 @@ body {
 		border-left: none;
 		border-radius: 0 20% 20% 0%;
 		color: $darkPastelAzure;
+		transition: color .5s ease-in-out;
+		&:hover {
+			background: $darkPastelAzure;
+			transition: color .5s ease-in-out;
+		}
 		&:focus {
 			box-shadow: none;
 			background: transparent;
 			border-color: $darkPastelAzure;
 		}
 		&:hover svg {
-			transform: scale(1.1);
+			color: #fff;
+			transform: scale(1.2);
+			transition: all .5s ease-in-out;
 		}
 	}
 	.form-control {

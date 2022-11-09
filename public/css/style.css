@@ -8313,6 +8313,11 @@ body {
   border-left: none;
   border-radius: 0 20% 20% 0%;
   color: #203d53;
+  transition: color 0.5s ease-in-out;
+}
+.accordion-body .btn-outline-secondary:hover {
+  background: #203d53;
+  transition: color 0.5s ease-in-out;
 }
 .accordion-body .btn-outline-secondary:focus {
   box-shadow: none;
@@ -8320,7 +8325,9 @@ body {
   border-color: #203d53;
 }
 .accordion-body .btn-outline-secondary:hover svg {
-  transform: scale(1.1);
+  color: #fff;
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
 }
 .accordion-body .form-control {
   background: transparent;

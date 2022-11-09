@@ -44,21 +44,17 @@
 
 <hr>
 
-### Resource Page
+### Resources
 
 [![Preview][product-screenshot]](http://webresources.epizy.com)
 
-### Resource Page - List
+### Changelog
 
 [![Preview][product-screenshot2]](http://webresources.epizy.com)
 
-### Resource Page - Changelog
+### Add Resource
 
 [![Preview][product-screenshot3]](http://webresources.epizy.com)
-
-### New Resource Page
-
-[![Preview][product-screenshot4]](http://webresources.epizy.com)
 
 The main sections and features are described below:
 
@@ -139,7 +135,6 @@ Project Link: [https://github.com/SilasRodrigues19/WebResources](https://github.
 [product-screenshot]: ./public/img/screenshots/preview.png
 [product-screenshot2]: ./public/img/screenshots/preview2.png
 [product-screenshot3]: ./public/img/screenshots/preview3.png
-[product-screenshot4]: ./public/img/screenshots/preview4.png
 [license-url]: https://github.com/SilasRodrigues19/WebResources/blob/master/LICENSE
 
 <br><hr>

@@ -188,7 +188,7 @@ body {
   --bs-modal-footer-border-color: #888;
 }
 .modal .btn-close {
-  background: url("https://api.iconify.design/ep/circle-close.svg?color=%23cacaca") center/1.5rem auto no-repeat;
+  background: url("https://api.iconify.design/ep/circle-close.svg?color=%23111") center/1.5rem auto no-repeat;
 }
 .modal .btn-close:focus {
   box-shadow: none;

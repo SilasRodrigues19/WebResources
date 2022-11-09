@@ -243,11 +243,11 @@ body {
 }
 .modal ::-moz-selection {
   background: #111;
-  color: #203d53;
+  color: #cacaca;
 }
 .modal ::selection {
   background: #111;
-  color: #203d53;
+  color: #cacaca;
 }
 .modal .modal-content {
   max-height: 30rem;

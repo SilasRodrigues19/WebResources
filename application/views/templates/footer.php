@@ -20,7 +20,7 @@
 		</li>
 		<br>
 		<li class="text-center text-muted">
-			<p><span class="iconify" data-icon="bytesize:code"></span> Stack para devs</p>
+			<p class="footerStack"><span class="iconify" data-icon="bytesize:code"></span> Stack para devs</p>
 			<p class="icons">
 				<span data-toggle="tooltip" title="CodeIgniter"><span class="iconify" data-icon="simple-icons:codeigniter" data-width="20" data-height="20"></span></span>
 				<span data-toggle="tooltip" title="MySQL"><span class="iconify" data-icon="fontisto:mysql" data-width="20" data-height="20"></span></span>

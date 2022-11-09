@@ -7,11 +7,49 @@
 	box-sizing: border-box;
 }
 
+.btn {
+	--bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba($darkPastelAzure, $alpha: 0.2);;
+}
+
+.btn-secondary {
+	--bs-btn-color: #fff;
+	--bs-btn-bg: #203d53;
+	--bs-btn-border-color: #203d53;
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: #203d53cc;
+	--bs-btn-hover-border-color: #3f7096;
+	--bs-btn-focus-shadow-rgb: 130, 138, 145;
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: #3f7096;
+	--bs-btn-active-border-color: #3f7096;
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	--bs-btn-disabled-color: #fff;
+	--bs-btn-disabled-bg: #203d53;
+	--bs-btn-disabled-border-color: #203d53;
+}
+
+  .btn-outline-secondary {
+	--bs-btn-color: #203d53;
+	--bs-btn-border-color: #203d53;
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: #203d53;
+	--bs-btn-hover-border-color: #203d53;
+	--bs-btn-focus-shadow-rgb: 108,117,125;
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: #203d53;
+	--bs-btn-active-border-color: #203d53;
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	--bs-btn-disabled-color: #203d53;
+	--bs-btn-disabled-bg: transparent;
+	--bs-btn-disabled-border-color: #203d53;
+	--bs-gradient: none;
+}
+
 a {
 	text-decoration: none;
-	color: $lightGrayDarker;
+	color: $grayishAzure;
 	&:hover {
-		color: $lightGrayHigher;
+		color: $darkPastelAzure;
 	}
 }
 
@@ -40,8 +78,8 @@ li {
 }
 
 ::selection {
-	background: #5e024a;
-	color: $lightGrayHigher;
+	background: $darkPastelAzure;
+	color: #fff;
 }
 
 html {
@@ -61,7 +99,7 @@ body {
 	padding-top: 10rem;
 	width: 100%;
 	background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
-	color: $lightGrayHigher;
+	color: $darkPastelAzure;
 	header {
 		position: fixed;
 		left: 0;
@@ -69,9 +107,9 @@ body {
 		z-index: 100;
 		width: 100%;
 		min-height: 8vh;
-		background: rgba($color: #010101, $alpha: 0.03);
+		background: rgba($grayishAzure, $alpha: 0.03);
 		backdrop-filter: blur(pxToRem(25));
-		border-bottom: pxToRem(1) solid rgba($color: #010101, $alpha: 0.08);
+		border-bottom: pxToRem(1) solid rgba($grayishAzure, $alpha: 0.08);
 		nav ul {
 			@include mediaQueryMax(s) {
 				gap: 1rem;
@@ -93,8 +131,8 @@ body {
 	&:before {
 		@include backgroundBefore(
 			fixed,
-			0.3,
-			url("../img/background.webp") no-repeat center / cover
+			0.8,
+			linear-gradient(to top, #6a85b6 0%, #bac8e0 100%)
 		);
 	}
 }
@@ -103,30 +141,35 @@ body {
 	input[type="search"] {
 		background: transparent;
 		border-right: none;
-		border-color: $lightGrayDarker;
+		border-color: $darkPastelAzure;
 		box-shadow: none;
-		color: $lightGrayHigher;
+		color: $darkPastelAzure;
 		&::-webkit-search-cancel-button {
 			-webkit-appearance: none;
 			appearance: none;
 			cursor: pointer;
 			height: pxToRem(15);
 			width: pxToRem(15);
-			background-image: url("https://api.iconify.design/ep/close-bold.svg?color=%23888");
+			background-image: url("https://api.iconify.design/ep/close-bold.svg?color=%23203d53");
 			background-size: pxToRem(15) pxToRem(15);
+		}
+		@include placeholder {
+			color: $grayishAzure;
 		}
 	}
 	.btn-outline-secondary {
-		border-color: $lightGrayDarker;
+		border-color: $darkPastelAzure;
 	}
 }
 
 #changeLogModal {
-	background: rgba($color: #010101, $alpha: 0.7);
+	background: rgba($color: #cacaca, $alpha: 0.7);
 }
 
 .modal {
 	--bs-modal-bg: transparent;
+	--bs-modal-header-border-color: #888;
+	--bs-modal-footer-border-color: #888;
 	.btn-close {
 		background: url("https://api.iconify.design/ep/circle-close.svg?color=%23cacaca")
 			center/1.5rem auto no-repeat;
@@ -136,7 +179,7 @@ body {
 	}
 	::selection {
 		background: #111;
-		color: $lightGrayHigher;
+		color: $darkPastelAzure;
 	}
 	.modal-content {
 		max-height: 30rem;
@@ -145,13 +188,13 @@ body {
 }
 
 .tooltip-inner {
-	background-color: #6c757d;
-	color: $lightGrayHigher;
+	background-color: $darkPastelAzure;
+	color: #f1f1f1;
 	margin: pxToRem(10) 0;
 }
 
 .tooltip-arrow::before {
-	--bs-tooltip-bg: #6c757d;
+	--bs-tooltip-bg: #203d53;
 }
 
 .bs-tooltip-top .tooltip-arrow::before,
@@ -190,9 +233,9 @@ body {
 .accordion {
 	--bs-accordion-active-bg: transparent !important;
 	--bs-accordion-bg: transparent;
-	--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.05);
-	--bs-accordion-btn-color: $lightGrayHigher;
-	--bs-accordion-active-color: $mediumGray;
+	--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(32, 61, 83, .2);
+	--bs-accordion-btn-color: $darkPastelAzure;
+	--bs-accordion-active-color: $grayishAzure;
 	--bs-accordion-active-bg: rgba(1, 1, 1, 0.2);
 	.accordion-item {
 		border: none;
@@ -200,16 +243,16 @@ body {
 		.accordion-button {
 			&:after,
 			&:not(.collapsed)::after {
-				background: url("https://api.iconify.design/iconoir/nav-arrow-down.svg?color=%23cacaca")
+				background: url("https://api.iconify.design/iconoir/nav-arrow-down.svg?color=%23203d53")
 					no-repeat center center / contain;
 				transition: all 0.4s linear;
 			}
 			&:is(.collapsed) {
-				color: $lightGrayHigher;
+				color: $darkPastelAzure;
 			}
 			&:not(.collapsed) {
 				--bs-accordion-border-color: transparent;
-				color: #f1f1f1;
+				color: rgba(32, 61, 83, .7);
 				> p {
 					transform: translateX(pxToRem(15));
 					transition: transform 0.6s ease-in-out;
@@ -222,6 +265,8 @@ body {
 .input-group-text {
 	border-radius: 20% 0% 0% 20%;
 	background: transparent;
+	border: 1px solid $darkPastelAzure;
+	color: $darkPastelAzure;
 }
 
 .select2-container--default .select2-selection--single {
@@ -239,12 +284,20 @@ body {
 
 .select2-container--default
 	.select2-selection--single
-	.select2-selection__rendered {
-	color: $lightGrayHigher;
+	.select2-selection__rendered, .select2-container--default .select2-selection--single .select2-selection__placeholder {
+	color: rgba($darkPastelAzure, $alpha: .6);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+	border-color: $darkPastelAzure transparent transparent transparent;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+	border-color: transparent transparent $darkPastelAzure transparent;
 }
 
 .select2-results__option--selectable {
-	color: $lightGrayDarker;
+	color: rgba($darkPastelAzure, $alpha: .6);
 }
 
 .badge-feature {
@@ -257,15 +310,14 @@ body {
 
 .accordion-body {
 	.btn-outline-secondary {
-		border: pxToRem(1) solid $lightGrayHigher;
+		border: pxToRem(1) solid $darkPastelAzure;
 		border-left: none;
 		border-radius: 0 20% 20% 0%;
-		color: $lightGrayHigher;
-		&:hover,
+		color: $darkPastelAzure;
 		&:focus {
 			box-shadow: none;
 			background: transparent;
-			border-color: $lightGrayHigher;
+			border-color: $darkPastelAzure;
 		}
 		&:hover svg {
 			transform: scale(1.1);
@@ -276,8 +328,9 @@ body {
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: nowrap;
+		border: 1px solid $darkPastelAzure;
 		@include placeholder {
-			color: $lightGrayHigher;
+			color: rgba($darkPastelAzure, $alpha: .7);
 		}
 	}
 }
@@ -290,17 +343,29 @@ body {
 	position: relative;
 	left: 0;
 	bottom: 0;
-	background: rgba($color: #010101, $alpha: 0.03);
+	background: rgba($grayishAzure, $alpha: 0.03);
 	backdrop-filter: blur(pxToRem(25));
-	border-top: pxToRem(1) solid rgba($color: #010101, $alpha: 0.08);
+	border-top: pxToRem(1) solid rgba($grayishAzure, $alpha: 0.08);
 	min-height: 8vh;
 	padding: 2rem 0;
 	margin-top: 10rem;
 	text-align: center;
 	@include flexCenterCol;
+	a {
+		color: #203d53;
+		transition: color .5s ease-in-out;
+		&:hover {
+			color: #cacaca;
+			transition: color .5s ease-in-out;
+		}
+	}
+	.footerStack {
+		color: #203d53;
+	}
 	.icons {
 		span {
 			display: inline;
+			color: #203d53;
 			&:not(:first-child):before {
 				content: "\007C";
 				margin: 0 pxToRem(8);
@@ -313,7 +378,7 @@ body {
 	position: fixed;
 	background: transparent;
 	border: solid pxToRem(3);
-	border-color: $lightGrayDarker;
+	border-color: $darkPastelAzure;
 	padding: pxToRem(15);
 	border-radius: pxToRem(10);
 	bottom: pxToRem(50);
@@ -323,9 +388,9 @@ body {
 	line-height: pxToRem(10);
 	transition: all 0.9s;
 	bottom: pxToRem(-150);
+	color: $darkPastelAzure;
 	&:hover {
-		background: $lightGrayHigher;
-		color: #111;
+		background: rgba($darkPastelAzure, $alpha: .3);
 	}
 }
 
@@ -348,15 +413,16 @@ body {
 form {
 	.form-control {
 		@include placeholder {
-			color: $lightGrayDarker;
+			color: rgba($darkPastelAzure, $alpha: .6);
 		}
 		background-color: transparent;
-		color: $lightGrayHigher;
+		color: $darkPastelAzure;
+		border-color: $darkPastelAzure;
 		&:focus {
 			background-color: transparent;
-			color: $lightGrayHigher;
-			box-shadow: 0 0 0 0.25rem rgba($color: #596164, $alpha: 0.2);
-			border-color: $mediumGray;
+			color: $darkPastelAzure;
+			box-shadow: 0 0 0 0.25rem rgba($darkPastelAzure, $alpha: 0.2);
+			border-color: $grayishAzure;
 		}
 	}
 }

@@ -126,7 +126,10 @@ body {
 	}
 	.title,
 	.showMessage {
-		animation: slide-in 3.5s ease-in-out;
+		animation: revealItems 1.5s ease-in-out;
+	}
+	.showMessage {
+		animation: slide-in 1.5s ease-in-out
 	}
 	&:before {
 		@include backgroundBefore(

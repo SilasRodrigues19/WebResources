@@ -58,11 +58,16 @@ const handleSubmit = () => {
 	}
 
 	if (!resource_link.match(regex)) {
+		let resourceLink = document.querySelector("#resource_link");
+
 		showAlertBox(
 			"Formato inválido de URL",
 			"Informe um formato de URL válido, começando com <span class='sweet_text'>http://</span> ou <span class='sweet_text'>https://</span>",
 			"error"
 		);
+
+		resourceLink.value = 'https://';
+
 		return false;
 	}
 

@@ -222,17 +222,42 @@ body {
   background-image: url("https://api.iconify.design/ep/close-bold.svg?color=%23203d53");
   background-size: 0.9375rem 0.9375rem;
 }
+.searchBar input[type=search]:focus::-moz-placeholder {
+  transform: translateX(-15rem);
+  -moz-transition: transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
+}
+.searchBar input[type=search]:focus:-ms-input-placeholder {
+  transform: translateX(-15rem);
+  -ms-transition: transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
+}
+.searchBar input[type=search]:focus::placeholder {
+  transform: translateX(-15rem);
+  transition: transform 1.5s ease-in-out;
+}
 .searchBar input[type=search]::-webkit-input-placeholder {
   color: #537895;
+  -webkit-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .searchBar input[type=search]::-moz-placeholder {
   color: #537895;
+  -moz-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .searchBar input[type=search]:-ms-input-placeholder {
   color: #537895;
+  -ms-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .searchBar .btn-outline-secondary {
   border-color: #203d53;
+  transition: 0.5s linear;
+}
+.searchBar .btn-outline-secondary:hover {
+  transform: translateX(-0.2rem);
+  transition: 0.5s linear;
 }
 
 #changeLogModal {
@@ -8510,5 +8535,7 @@ form .form-control:focus {
   background-color: transparent;
   color: #203d53;
   box-shadow: 0 0 0 0.25rem rgba(32, 61, 83, 0.2);
+  -webkit-clip-path: inset(-0.2rem 0px -0.2rem -0.2rem);
+          clip-path: inset(-0.2rem 0px -0.2rem -0.2rem);
   border-color: #537895;
 }/*# sourceMappingURL=style.css.map */

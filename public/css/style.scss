@@ -165,12 +165,24 @@ body {
 			background-image: url("https://api.iconify.design/ep/close-bold.svg?color=%23203d53");
 			background-size: pxToRem(15) pxToRem(15);
 		}
+		&:focus {
+			&::placeholder {
+				transform: translateX(-15rem);
+				transition: transform 1.5s ease-in-out;
+			}
+		}
 		@include placeholder {
 			color: $grayishAzure;
+			transition: transform .5s ease-in-out;
 		}
 	}
 	.btn-outline-secondary {
 		border-color: $darkPastelAzure;
+		transition: .5s linear;
+		&:hover {
+			transform: translateX(-.2rem);
+			transition: .5s linear;
+		}
 	}
 }
 
@@ -441,6 +453,7 @@ form {
 			background-color: transparent;
 			color: $darkPastelAzure;
 			box-shadow: 0 0 0 0.25rem rgba($darkPastelAzure, $alpha: 0.2);
+			clip-path: inset(-0.2rem 0px -0.2rem -0.2rem);
 			border-color: $grayishAzure;
 		}
 	}

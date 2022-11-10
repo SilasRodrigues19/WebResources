@@ -126,7 +126,10 @@ body {
 	}
 	.title,
 	.showMessage {
-		animation: slide-in 3.5s ease-in-out;
+		animation: revealItems 1.5s ease-in-out;
+	}
+	.showMessage {
+		animation: slide-in 1.5s ease-in-out
 	}
 	&:before {
 		@include backgroundBefore(
@@ -179,7 +182,7 @@ body {
 	}
 	::selection {
 		background: #111;
-		color: $darkPastelAzure;
+		color: #cacaca;
 	}
 	.modal-content {
 		max-height: 30rem;
@@ -314,13 +317,20 @@ body {
 		border-left: none;
 		border-radius: 0 20% 20% 0%;
 		color: $darkPastelAzure;
+		transition: color .5s ease-in-out;
+		&:hover {
+			background: $darkPastelAzure;
+			transition: color .5s ease-in-out;
+		}
 		&:focus {
 			box-shadow: none;
 			background: transparent;
 			border-color: $darkPastelAzure;
 		}
 		&:hover svg {
-			transform: scale(1.1);
+			color: #fff;
+			transform: scale(1.2);
+			transition: all .5s ease-in-out;
 		}
 	}
 	.form-control {

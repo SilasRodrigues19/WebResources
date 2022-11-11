@@ -250,6 +250,13 @@ body {
 	font-family: monospace;
 }
 
+.swal2-styled.swal2-confirm {
+	background: $darkPastelAzure;
+	&:focus {
+		box-shadow: 0 0 0 3px $darkPastelAzure;
+	}
+}
+
 .collapse {
 	@include slideInUpOnCollapse;
 }

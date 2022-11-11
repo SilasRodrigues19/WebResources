@@ -325,6 +325,13 @@ body {
   font-family: monospace;
 }
 
+.swal2-styled.swal2-confirm {
+  background: #203d53;
+}
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: 0 0 0 3px #203d53;
+}
+
 .collapse:nth-of-type(1) {
   -webkit-animation: slide-in-up 0.05s ease-in-out;
           animation: slide-in-up 0.05s ease-in-out;

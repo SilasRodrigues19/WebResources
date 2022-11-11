@@ -52,7 +52,7 @@
 							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.0] - 16/08/2022 Adicionado filtro para buscar pesquisa por categorias existentes
 						 </p>
 						 <p>
-							<span class="iconify badge-bugfix" data-icon="foundation:pricetag-multiple"></span>[0.2.1] - 17/08/2022 Correção de função depreciada para ser suportada pelo SASS 2.0
+							<span class="iconify badge-bugfix" data-icon="foundation:pricetag-multiple"></span>	 [0.2.1] - 17/08/2022 Correção de função depreciada para ser suportada pelo SASS 2.0
 						 </p>
 						 <p>
 							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.2] - 18/08/2022 Criação da página de erro customizada
@@ -62,6 +62,12 @@
 						 </p>
 						 <p>
 							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [0.2.4] - 21/08/2022 Adicionados cabeçalho e rodapé
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [1.0.0] - 09/11/2022 Mudança no esquema de cores
+						 </p>
+						 <p>
+							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [1.0.1] - 09/11/2022 Melhoria na validação do link para melhorar a UX
 						 </p>
 					</div>
 					

@@ -34,7 +34,7 @@
 		<link rel="stylesheet" href="<?= base_url('public/libraries/bootstrap/bootstrap.min.css'); ?>">
 		<link rel="stylesheet" href="<?= base_url('public/libraries/animate/animate.min.css'); ?>">
 		<link rel="stylesheet" href="<?= base_url('public/libraries/select2/select2.min.css'); ?>">
-		<link rel="stylesheet" href="<?= base_url('public/css/style.css'); ?>">
+		<link rel="stylesheet" href="<?= base_url('public/css/style.min.css'); ?>">
 		<link rel="canonical" href="<?= base_url(); ?>">
 	</head>
 

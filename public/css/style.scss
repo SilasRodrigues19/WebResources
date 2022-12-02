@@ -8,7 +8,8 @@
 }
 
 .btn {
-	--bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba($darkPastelAzure, $alpha: 0.2);;
+	--bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba($darkPastelAzure, $alpha: 0.2);
+	;
 }
 
 .btn-secondary {
@@ -28,13 +29,13 @@
 	--bs-btn-disabled-border-color: #203d53;
 }
 
-  .btn-outline-secondary {
+.btn-outline-secondary {
 	--bs-btn-color: #203d53;
 	--bs-btn-border-color: #203d53;
 	--bs-btn-hover-color: #fff;
 	--bs-btn-hover-bg: #203d53;
 	--bs-btn-hover-border-color: #203d53;
-	--bs-btn-focus-shadow-rgb: 108,117,125;
+	--bs-btn-focus-shadow-rgb: 108, 117, 125;
 	--bs-btn-active-color: #fff;
 	--bs-btn-active-bg: #203d53;
 	--bs-btn-active-border-color: #203d53;
@@ -57,6 +58,7 @@
 a {
 	text-decoration: none;
 	color: $grayishAzure;
+
 	&:hover {
 		color: $darkPastelAzure;
 	}
@@ -109,6 +111,7 @@ body {
 	width: 100%;
 	background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
 	color: $darkPastelAzure;
+
 	header {
 		position: fixed;
 		left: 0;
@@ -119,33 +122,37 @@ body {
 		background: rgba($grayishAzure, $alpha: 0.03);
 		backdrop-filter: blur(pxToRem(25));
 		border-bottom: pxToRem(1) solid rgba($grayishAzure, $alpha: 0.08);
+
 		nav ul {
 			@include mediaQueryMax(s) {
 				gap: 1rem;
 				margin-right: pxToRem(3);
+
 				li:first-child {
 					display: flex;
 					gap: 0.5rem;
 				}
 			}
+
 			@include flexCenter(flex-end);
 			padding: 0 pxToRem(35);
 			margin: pxToRem(20) auto;
 		}
 	}
+
 	.title,
 	.showMessage {
 		animation: revealItems 1.5s ease-in-out;
 	}
+
 	.showMessage {
 		animation: slide-in 1.5s ease-in-out
 	}
+
 	&:before {
-		@include backgroundBefore(
-			fixed,
+		@include backgroundBefore(fixed,
 			0.8,
-			linear-gradient(to top, #6a85b6 0%, #bac8e0 100%)
-		);
+			linear-gradient(to top, #6a85b6 0%, #bac8e0 100%));
 	}
 }
 
@@ -156,6 +163,7 @@ body {
 		border-color: $darkPastelAzure;
 		box-shadow: none;
 		color: $darkPastelAzure;
+
 		&::-webkit-search-cancel-button {
 			-webkit-appearance: none;
 			appearance: none;
@@ -165,20 +173,24 @@ body {
 			background-image: url("https://api.iconify.design/ep/close-bold.svg?color=%23203d53");
 			background-size: pxToRem(15) pxToRem(15);
 		}
+
 		&:focus {
 			&::placeholder {
 				transform: translateX(-15rem);
 				transition: transform 1.5s ease-in-out;
 			}
 		}
+
 		@include placeholder {
 			color: $grayishAzure;
 			transition: transform .5s ease-in-out;
 		}
 	}
+
 	.btn-outline-secondary {
 		border-color: $darkPastelAzure;
 		transition: .5s linear;
+
 		&:hover {
 			transform: translateX(-.2rem);
 			transition: .5s linear;
@@ -194,17 +206,20 @@ body {
 	--bs-modal-bg: transparent;
 	--bs-modal-header-border-color: #888;
 	--bs-modal-footer-border-color: #888;
+
 	.btn-close {
-		background: url("https://api.iconify.design/ep/circle-close.svg?color=%23111")
-			center/1.5rem auto no-repeat;
+		background: url("https://api.iconify.design/ep/circle-close.svg?color=%23111") center/1.5rem auto no-repeat;
+
 		&:focus {
 			box-shadow: none;
 		}
 	}
+
 	::selection {
 		background: #111;
 		color: #cacaca;
 	}
+
 	.modal-content {
 		max-height: 30rem;
 		overflow: auto;
@@ -224,16 +239,14 @@ body {
 .bs-tooltip-top .tooltip-arrow::before,
 .bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
 	top: pxToRem(-10);
-	border-width: var(--bs-tooltip-arrow-height)
-		calc(var(--bs-tooltip-arrow-width) * 0.5) 0;
+	border-width: var(--bs-tooltip-arrow-height) calc(var(--bs-tooltip-arrow-width) * 0.5) 0;
 	border-top-color: var(--bs-tooltip-bg);
 }
 
 .bs-tooltip-bottom .tooltip-arrow::before,
 .bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
 	bottom: pxToRem(-10);
-	border-width: 0 calc(var(--bs-tooltip-arrow-width) * 0.5)
-		var(--bs-tooltip-arrow-height);
+	border-width: 0 calc(var(--bs-tooltip-arrow-width) * 0.5) var(--bs-tooltip-arrow-height);
 	border-bottom-color: var(--bs-tooltip-bg);
 }
 
@@ -241,17 +254,19 @@ body {
 	border: 0.1rem dashed;
 	padding: 0.3rem 0.5rem;
 	border-radius: 5%;
+
 	.closeFilter {
 		cursor: pointer;
 	}
 }
 
-.swal2-container.swal2-center > .swal2-popup {
+.swal2-container.swal2-center>.swal2-popup {
 	font-family: monospace;
 }
 
 .swal2-styled.swal2-confirm {
 	background: $darkPastelAzure;
+
 	&:focus {
 		box-shadow: 0 0 0 3px $darkPastelAzure;
 	}
@@ -268,23 +283,28 @@ body {
 	--bs-accordion-btn-color: $darkPastelAzure;
 	--bs-accordion-active-color: $grayishAzure;
 	--bs-accordion-active-bg: rgba(1, 1, 1, 0.2);
+
 	.accordion-item {
 		border: none;
 		@include slideInUpAccordionItem;
+
 		.accordion-button {
+
 			&:after,
 			&:not(.collapsed)::after {
-				background: url("https://api.iconify.design/iconoir/nav-arrow-down.svg?color=%23203d53")
-					no-repeat center center / contain;
+				background: url("https://api.iconify.design/iconoir/nav-arrow-down.svg?color=%23203d53") no-repeat center center / contain;
 				transition: all 0.4s linear;
 			}
+
 			&:is(.collapsed) {
 				color: $darkPastelAzure;
 			}
+
 			&:not(.collapsed) {
 				--bs-accordion-border-color: transparent;
 				color: rgba(32, 61, 83, .7);
-				> p {
+
+				>p {
 					transform: translateX(pxToRem(15));
 					transition: transform 0.6s ease-in-out;
 				}
@@ -306,16 +326,15 @@ body {
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field,
-.select2-container--default .select2-results > .select2-results__options {
+.select2-container--default .select2-results>.select2-results__options {
 	background: rgba($color: #010101, $alpha: 0.1);
 	color: #a5a5a5;
 	border: none;
 	outline: none;
 }
 
-.select2-container--default
-	.select2-selection--single
-	.select2-selection__rendered, .select2-container--default .select2-selection--single .select2-selection__placeholder {
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
 	color: rgba($darkPastelAzure, $alpha: .6);
 }
 
@@ -346,27 +365,32 @@ body {
 		border-radius: 0 20% 20% 0%;
 		color: $darkPastelAzure;
 		transition: color .5s ease-in-out;
+
 		&:hover {
 			background: $darkPastelAzure;
 			transition: color .5s ease-in-out;
 		}
+
 		&:focus {
 			box-shadow: none;
 			background: transparent;
 			border-color: $darkPastelAzure;
 		}
+
 		&:hover svg {
 			color: #fff;
 			transform: scale(1.2);
 			transition: all .5s ease-in-out;
 		}
 	}
+
 	.form-control {
 		background: transparent;
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: nowrap;
 		border: 1px solid $darkPastelAzure;
+
 		@include placeholder {
 			color: rgba($darkPastelAzure, $alpha: .7);
 		}
@@ -389,21 +413,26 @@ body {
 	margin-top: 10rem;
 	text-align: center;
 	@include flexCenterCol;
+
 	a {
 		color: #203d53;
 		transition: color .5s ease-in-out;
+
 		&:hover {
 			color: #cacaca;
 			transition: color .5s ease-in-out;
 		}
 	}
+
 	.footerStack {
 		color: #203d53;
 	}
+
 	.icons {
 		span {
 			display: inline;
 			color: #203d53;
+
 			&:not(:first-child):before {
 				content: "\007C";
 				margin: 0 pxToRem(8);
@@ -427,6 +456,7 @@ body {
 	transition: all 0.9s;
 	bottom: pxToRem(-150);
 	color: $darkPastelAzure;
+
 	&:hover {
 		background: rgba($darkPastelAzure, $alpha: .3);
 	}
@@ -442,6 +472,7 @@ body {
 	from {
 		transform: translateY(-200%);
 	}
+
 	to {
 		transform: translateY(0);
 	}
@@ -453,9 +484,11 @@ form {
 		@include placeholder {
 			color: rgba($darkPastelAzure, $alpha: .6);
 		}
+
 		background-color: transparent;
 		color: $darkPastelAzure;
 		border-color: $darkPastelAzure;
+
 		&:focus {
 			background-color: transparent;
 			color: $darkPastelAzure;

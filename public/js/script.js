@@ -140,8 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	accordions.forEach((accordion, i) => {
 		if (accordion.innerHTML.trim() === "") {
 			accordionsButtons[i].setAttribute("disabled", true);
-			accordionsButtons[i].style.cssText =
-				"pointer-events: none; opacity: .7; user-select: none";
+			accordionsButtons[i].classList.add("d-none");
 		}
 	});
 });

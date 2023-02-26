@@ -69,6 +69,9 @@
 						 <p>
 							<span class="iconify badge-feature" data-icon="foundation:pricetag-multiple"></span> [1.0.1] - 09/11/2022 Melhoria na validação do link para melhorar a UX
 						 </p>
+						 <p>
+							<span class="iconify badge-bugfix" data-icon="foundation:pricetag-multiple"></span> [1.0.2] - 25/02/2023 Correção dos itens do accordion para melhorar a UX | Melhoria na função de animações
+						 </p>
 					</div>
 					
 					<div class="modal-footer">
@@ -96,48 +99,40 @@
 
 					<?php if($showList): ?>
 						<?php foreach($showCategory as $idx => $value): ?>
-						<?='
-
 							<div class="accordion-item">
-								<h2 class="accordion-header" id="headingOne">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion'.$showCategory[$idx]['category_id'].'" aria-expanded="true" aria-controls="Accordion'.$showCategory[$idx]['category_id'].'">
-											<p>'.$showCategory[$idx]['category_description'].'</p>
+								<h2 class="accordion-header" id="heading<?= $showCategory[$idx]['category_id'] ?>">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $showCategory[$idx]['category_id'] ?>" aria-expanded="false" aria-controls="collapse<?= $showCategory[$idx]['category_id'] ?>">
+											<p><?= $showCategory[$idx]['category_description'] ?></p>
 									</button>
 								</h2>
+								<div id="collapse<?= $showCategory[$idx]['category_id'] ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $showCategory[$idx]['category_id'] ?>" data-bs-parent="#frontEndAccordion">
+                    <div class="accordion-body">
+                        <?php foreach($showList as $idx2 => $value): ?>
+                            <?php if($showList[$idx2]['category_id'] === $showCategory[$idx]['category_id']): ?>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><?= $showList[$idx2]['resource_id'] ?></span>
+                                    </div>
+                                    <input title="<?= $showList[$idx2]['resource_name_description'] ?>" disabled type="text" class="form-control" placeholder="<?= $showList[$idx2]['resource_name_description'] ?>" />
+                                    <div class="input-group-append">
+                                        <a href="<?= $showList[$idx2]['resource_link'] ?>" target="_blank" rel="noreferrer">
+                                            <button class="btn btn-outline-secondary" type="button">
+                                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 10.5L21 3m-5 0h5v5m0 6v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
 							</div>
-						'?>
 						<?php endforeach; ?>
 						<?php else: ?>
 							<div class="col-md-12 text-center m-auto">
 								<span>Não existem dados a serem exibidos</span>
 							</div>
-					<?php endif; ?>
-					
-					<?php foreach($showList as $idx => $value): ?>
-					<?='
-
-							<div id="accordion'.$showList[$idx]['category_id'].'" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#frontEndAccordion">
-								<div class="accordion-body">
-									<div class="input-group mb-3">
-										<div class="input-group-prepend">
-											<span class="input-group-text">'.$showList[$idx]['resource_id'].'</span>
-										</div>
-										<input title="'.$showList[$idx]['resource_name_description'].'" disabled type="text" class="form-control" placeholder="'.$showList[$idx]['resource_name_description'].'" />
-										<div class="input-group-append">
-											<a href="'.$showList[$idx]['resource_link'].'" target="_blank" rel="noreferrer">
-												<button class="btn btn-outline-secondary" type="button">
-													<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 10.5L21 3m-5 0h5v5m0 6v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
-												</button>
-											</a>
-										</div>
-										
-									</div>
-								</div>
-							</div>
-
-					';?>
-
-					<?php endforeach; ?>
+						<?php endif; ?>
 					</div>				
 				</div>
 			</div>

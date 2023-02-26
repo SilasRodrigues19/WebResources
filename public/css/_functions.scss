@@ -38,8 +38,8 @@
 
 @mixin slideInUpOnCollapse {
 	@for $i from 1 through 250 {
-		&:nth-of-type(#{$i}) {
-			animation: slide-in-up #{$i * 0.05}s ease-in-out;
+		&:nth-child(#{$i}) {
+			animation: slide-in-up #{$i * 0.2}s ease-in-out, revealItems #{$i * .9}s ease-in-out;
 		}
 	}
 }

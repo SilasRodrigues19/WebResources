@@ -141,8 +141,8 @@ body {
 	}
 
 	.title,
-	.showMessage {
-		animation: revealItems 1.5s ease-in-out;
+	.showMessage, .accordion, .nav-bar {
+		@include slideInUpOnCollapse;
 	}
 
 	.showMessage {
@@ -272,10 +272,6 @@ body {
 	}
 }
 
-.collapse {
-	@include slideInUpOnCollapse;
-}
-
 .accordion {
 	--bs-accordion-active-bg: transparent !important;
 	--bs-accordion-bg: transparent;
@@ -287,7 +283,6 @@ body {
 	.accordion-item {
 		border: none;
 		
-
 		.accordion-button {
 
 			border-radius: var(--bs-accordion-inner-border-radius);

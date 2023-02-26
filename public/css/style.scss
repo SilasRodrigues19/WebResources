@@ -74,13 +74,13 @@ li {
 }
 
 ::-webkit-scrollbar {
-	width: pxToRem(6);
+	width: pxToRem(8);
 	background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-	border-radius: pxToRem(10);
-	background-color: #868f96;
+	border-radius: pxToRem(2);
+	background-color: #203d53;
 	display: none;
 }
 
@@ -279,16 +279,18 @@ body {
 .accordion {
 	--bs-accordion-active-bg: transparent !important;
 	--bs-accordion-bg: transparent;
-	--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(32, 61, 83, .2);
+	--bs-accordion-btn-focus-box-shadow: 0 0 0 .1rem rgba(32, 61, 83, .2);
 	--bs-accordion-btn-color: $darkPastelAzure;
 	--bs-accordion-active-color: $grayishAzure;
 	--bs-accordion-active-bg: rgba(1, 1, 1, 0.2);
 
 	.accordion-item {
 		border: none;
-		@include slideInUpAccordionItem;
+		
 
 		.accordion-button {
+
+			border-radius: var(--bs-accordion-inner-border-radius);
 
 			&:after,
 			&:not(.collapsed)::after {
@@ -358,7 +360,15 @@ body {
 	color: #d6424280;
 }
 
-.accordion-body {
+.accordion-body {	
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+	padding: 0;
+	margin: 2.5rem 2rem;
+	> div {
+		@include slideInUpAccordionItem;
+	}
 	.btn-outline-secondary {
 		border: pxToRem(1) solid $darkPastelAzure;
 		border-left: none;

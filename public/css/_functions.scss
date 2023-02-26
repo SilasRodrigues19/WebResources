@@ -29,15 +29,15 @@
 }
 
 @mixin slideInUpAccordionItem {
-	@for $i from 1 through 999 {
+	@for $i from 1 through 250 {
 		&:nth-child(#{$i}) {
-			animation: slide-in-up #{$i * 0.3}s ease-in-out, revealItems #{$i * .3}s ease-in-out;
+			animation: slide-in-up #{$i * 0.3}s ease-in-out, revealItems #{$i * .17}s ease-in-out;
 		}
 	}
 }
 
 @mixin slideInUpOnCollapse {
-	@for $i from 1 through 999 {
+	@for $i from 1 through 250 {
 		&:nth-of-type(#{$i}) {
 			animation: slide-in-up #{$i * 0.05}s ease-in-out;
 		}

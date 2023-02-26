@@ -66,7 +66,7 @@ const handleSubmit = () => {
 			"error"
 		);
 
-		resourceLink.value = 'https://';
+		resourceLink.value = "https://";
 
 		return false;
 	}
@@ -132,3 +132,16 @@ if (document.body.contains(showMessage)) {
 		showMessage.classList.add("d-none");
 	}, 7500);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	const accordions = document.querySelectorAll(".accordion-body");
+	const accordionsButtons = document.querySelectorAll(".accordion-button");
+
+	accordions.forEach((accordion, i) => {
+		if (accordion.innerHTML.trim() === "") {
+			accordionsButtons[i].setAttribute("disabled", true);
+			accordionsButtons[i].style.cssText =
+				"pointer-events: none; opacity: .7; user-select: none";
+		}
+	});
+});

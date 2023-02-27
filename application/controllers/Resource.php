@@ -29,9 +29,13 @@ class Resource extends MY_Controller
 
 		$data['searchTerm'] = false;
 
-		if (isset($search) && strlen(trim($search)) > 0) {
-				$data['searchTerm'] = preg_replace('/\s+/', '', $search);
-		}
+		if (isset($search) && strlen(trim($search)) > 0):
+				$searchedWords = explode(' ', $search);
+				$cleanedWords = array_map('trim', $searchedWords);
+				$cleanedSearchTerm = implode(' ', $cleanedWords);
+				$data['searchTerm'] = $cleanedSearchTerm;
+    endif;
+
 
 		$res = $this->mres->showList($search);
 

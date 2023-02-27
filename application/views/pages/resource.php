@@ -130,7 +130,7 @@
 						<?php endforeach; ?>
 						<?php else: ?>
 							<div class="col-md-12 text-center m-auto">
-								<span>Não existem dados a serem exibidos</span>
+								<span>Não existem dados a serem exibidos para o filtro <strong class="underline"><?= $searchTerm; ?>.</strong></span>
 							</div>
 						<?php endif; ?>
 					</div>				

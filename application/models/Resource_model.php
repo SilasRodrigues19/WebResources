@@ -24,7 +24,7 @@ class Resource_model extends CI_Model {
   {
 
     if($filter) $filter = " AND C.resource_description LIKE " . $this->db->escape('%' . $filter . '%') . " 
-    OR C.resource_name LIKE " . $this->db->escape('%' . $filter . '%') . " ";
+    OR C.resource_name LIKE " . $this->db->escape('%' . $filter . '%') . " OR C.resource_link LIKE " . $this->db->escape('%' . $filter . '%') . " ";
     
 
     $select = "SELECT  C.*, CONCAT(C.resource_name, ' - ' , C.resource_description) AS resource_name_description, A.*

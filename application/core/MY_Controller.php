@@ -7,6 +7,13 @@ class MY_Controller extends CI_Controller {
     	parent::__construct();
 	}
 
-  
+  public function _remap($method, $params = array())
+    {
+        if (!method_exists($this, $method)) {
+            redirect(base_url());
+        } else {
+            call_user_func_array(array($this, $method), $params);
+        }
+    }
 
 }

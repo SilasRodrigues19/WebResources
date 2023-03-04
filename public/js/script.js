@@ -21,23 +21,13 @@ const showAlertBox = (title, text, icon) => {
 	});
 };
 
-let searchInput = document.querySelector("#searchInput");
-
 const handleSearch = () => {
+	let searchInput = document.querySelector("#searchInput");
+
 	searchInput.value = "";
 	window.location.href = "./";
+	//formSubmit.submit();
 };
-
-document.addEventListener("submit", (e) => {
-	if (searchInput.value.trim().length < 3) {
-		e.preventDefault();
-		showAlertBox(
-			"Erro ao filtrar",
-			"Forneça pelo menos 3 caracteres",
-			"warning"
-		);
-	}
-});
 
 const handleSubmit = () => {
 	let act = document.querySelector("#act");
@@ -143,12 +133,14 @@ if (document.body.contains(showMessage)) {
 	}, 7500);
 }
 
-const swalContainer = document.querySelector(".swal2-container");
+document.addEventListener("DOMContentLoaded", () => {
+	const accordions = document.querySelectorAll(".accordion-body");
+	const accordionsButtons = document.querySelectorAll(".accordion-button");
 
-if (document.body.contains(swalContainer)) {
-	document.addEventListener("keydown", (e) => {
-		if (e.key === "Escape") {
-			console.log("ESC Pressionado");
+	accordions.forEach((accordion, i) => {
+		if (accordion.innerHTML.trim() === "") {
+			accordionsButtons[i].setAttribute("disabled", true);
+			accordionsButtons[i].classList.add("d-none");
 		}
 	});
-}
+});
